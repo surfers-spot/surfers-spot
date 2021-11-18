@@ -1,22 +1,32 @@
 import React from 'react';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Header, Search, Container } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
     return (
-      <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
+      <div className="surfers-spot-background">
+        <Container textAlign="center" style={{padding: 50}}>
+          <Header inverted as='h1'>Catch your Next Wave</Header>
+          <Search size="massive" placeholder="Search for Surf Spots" />
+        </Container>
+        <Grid id='landing page' centered stackable columns={3} container>
+          <Grid.Column textAlign='center' className="blurBackground">
+            <Header inverted as='h1'>Breaks</Header>
+            <Header inverted as='h3'>Learn about the different surf breaks here on Oahu</Header>
+          </Grid.Column>
 
-        <Grid.Column width={4}>
-          <Image size='small' circular src="/images/meteor-logo.png"/>
-        </Grid.Column>
+          <Grid.Column textAlign='center' className="blurBackground">
+            <Header inverted as='h1'>Reviews</Header>
+            <Header inverted as='h3'>Leave a review on the different surf breaks or read some before you head out for your next session. </Header>
+          </Grid.Column>
 
-        <Grid.Column width={8}>
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Grid.Column>
-
-      </Grid>
+          <Grid.Column textAlign='center' className="blurBackground">
+            <Header inverted as='h1'>Lessons</Header>
+            <Header inverted as='h3'>Find information on how to surf and places offering lessons.</Header>
+          </Grid.Column>
+        </Grid>
+      </div>
     );
   }
 }

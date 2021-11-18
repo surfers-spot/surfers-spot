@@ -1,0 +1,10 @@
+.surfers-spot-background {
+  background-size: cover !important;
+  background: url("/images/Background.jpg") top;
+  height: 600px;
+}
+
+.blurBackground {
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
