@@ -11,6 +11,30 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
+  "defaultBreaks": [
+    { "name": "Bowls", "location": "Duke Kahanamoku Lagoon Boardwalk, Honolulu, HI 96815",
+      "image": "https://www.surf-forecast.com/system/images/15181/large/Ala-Moana-Bowls.jpg?1450520565",
+      "direction": "Right and Left",
+      "type": "Reef",
+      "difficulty": "Hard",
+      "description": "Add Later"
+    },
+    { "name": "Canoes", "location": "Kuhio Beach Park",
+      "image": "http://www.surfboardshack.com/images/breaks/canoes_02.jpg",
+      "direction": "Right and Left",
+      "type": "Reef",
+      "difficulty": "Easy",
+      "description": "Add Later"
+    },
+    { "name": "Kewalos", "location": "Kewalo Basin Park",
+      "image": "http://www.surfboardshack.com/images/breaks/kewalos_02.jpg",
+      "direction": "Right and Left",
+      "type": "Reef",
+      "difficulty": "Medium",
+      "description": "Add Later"
+    }
+  ],
+
   "monti": {
     "appId": "st2gcehxg4z8by5Ga",
     "appSecret": "c5446863-b04e-456b-9ca7-bad002af5822"
