@@ -1,21 +1,54 @@
 import React from 'react';
+import { Grid, List, Input } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
-/** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
-class Footer extends React.Component {
+export default class FooterMenu extends React.Component {
   render() {
-    const divStyle = { paddingTop: '15px', color: 'black' };
     return (
-      <footer>
-        <div style={divStyle} className="ui center aligned container">
-          <hr />
-              Department of Information and Computer Sciences <br />
-              University of Hawaii<br />
-              Honolulu, HI 96822 <br />
-          <a href="https://surfers-spot.github.io/">Github.io Page</a>
-        </div>
-      </footer>
+      <div className="footer-background">
+        <Grid container centered stackable columns={3}>
+          <Grid.Column>
+            <List>
+              <text style={{ color: 'grey', fontSize: 22, fontFamily: 'Volkhov' }}>Navigate</text><hr/>
+              <List.Item as={NavLink} style={{ color: 'white' }} exact to="/about" key='about'>About Us</List.Item>
+              <List.Item>Go to a Random Break</List.Item>
+              <List.Item>Visit a Popular Break</List.Item>
+              <List.Item>Break Directory</List.Item>
+              <List.Item>Leave a Review</List.Item>
+            </List>
+          </Grid.Column>
+
+          <Grid.Column>
+            <div className="ui aligned container">
+              <text style={{ color: 'grey', fontSize: 22, fontFamily: 'Volkhov' }}>Organization</text><hr/>
+              Department of Information <br/> and Computer Sciences <br/>
+            University of Hawaii<br/>
+            Honolulu, HI 96822 <br/>
+              <a href="https://surfers-spot.github.io/">Github.io Page</a>
+            </div>
+          </Grid.Column>
+
+          <Grid.Column padding-left="300px">
+            <List>
+              <text style={{ color: 'grey', fontSize: 22, fontFamily: 'Volkhov' }}>Stay Connected</text><hr/>
+              <List.Item>Want to be informed when new breaks are added?</List.Item>
+              <List.Item>Enter your email below to stay informed</List.Item>
+              <List.Item>
+                <Input
+                  action={{
+                    color: 'teal',
+                    labelPosition: 'left',
+                    icon: 'envelope',
+                    content: 'JOIN',
+                  }}
+                  actionPosition='left'
+                  placeholder='Enter email address'
+                />
+              </List.Item>
+            </List>
+          </Grid.Column>
+        </Grid>
+      </div>
     );
   }
 }
-
-export default Footer;

@@ -8,3 +8,9 @@
   backdrop-filter: blur(5px);
   border-radius: 10px;
 }
+
+.footer-background{
+  background-color: #333333;
+  color: white;
+  padding-top: 25px;
+}
