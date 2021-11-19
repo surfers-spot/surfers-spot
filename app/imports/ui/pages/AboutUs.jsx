@@ -20,7 +20,7 @@ export default class AboutUs extends React.Component {
             <Grid.Row>
               <Grid.Column width={8}>
                 <Header as='h3' style={{ fontSize: '2em' }}>
-                  We Help Companies and Companions
+                  We Help Surferapos&;s Catch Their Next Wave
                 </Header>
                 <p style={{ fontSize: '1.33em' }}>
                   We can give your company superpowers to do things that they never thought possible.
@@ -35,7 +35,7 @@ export default class AboutUs extends React.Component {
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
-                <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+                <Image bordered rounded size='large' src='/images/surfer1.jpg' />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
