@@ -80,8 +80,7 @@ class KewalosPage extends React.Component {
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
         >
-          <a href='https://www.google.com/maps/place/Duke+Kahanamoku+Lagoon+Boardwalk,+Honolulu,+HI+96815/@21.281753,
-                -157.8415902,17z/data=!3m1!4b1!4m5!3m4!1s0x7c006df60f4b4891:0xe083ee318e49370c!8m2!3d21.281753!4d-157.8394015'>Get Directions</a>
+          <a href='https://www.google.com/maps/dir//Kewalo+Basin+Park/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7c006e0760b99bd5:0x4979bfa73a2497e7?sa=X&ved=2ahUKEwiU1aDW0r_0AhW5GDQIHUTGBUkQ9Rd6BAhIEAM'>Get Directions</a>
         </Divider>
       </div>
     );
