@@ -14,3 +14,7 @@
   color: white;
   padding-top: 25px;
 }
+
+.break-background{
+  background: url("/images/surfboardBackgroun.jpg") top;
+}

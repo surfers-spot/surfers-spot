@@ -24,19 +24,19 @@ class BowlsPage extends React.Component {
     return (
       <div>
         <br/>
-        <Segment style={{ padding: '2em' }} vertical>
+        <Segment style={{ padding: '2em', backgroundColor: '#BBFFFF' }} vertical>
           <Header as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
         </Segment>
 
-        <Segment style={{ padding: '0em' }} vertical>
+        <Segment style={{ padding: '0em', backgroundColor: '#9AFFD2' }} vertical>
           <Grid celled='internally' columns='equal' stackable>
             <Grid.Row textAlign='center'>
-              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '2em' }}>
+              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '3em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                   Difficulty: {difficulty}
                 </Header>
               </Grid.Column>
-              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '2em' }}>
+              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '3em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                   Type: {type}
                 </Header>
@@ -50,7 +50,8 @@ class BowlsPage extends React.Component {
           </Grid>
         </Segment>
 
-        <Segment style={{ padding: '8em 0em' }} vertical>
+        <div className="break-background">
+        <Segment style={{ padding: '8em 0em' }} vertical >
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
               <Grid.Column width={7}>
@@ -78,6 +79,7 @@ class BowlsPage extends React.Component {
             </Divider>
           </Grid>
         </Segment>
+        </div>
       </div>
     );
   }
