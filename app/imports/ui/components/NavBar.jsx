@@ -13,7 +13,7 @@ class NavBar extends React.Component {
     return (
       <Menu style={menuStyle} attached="top" borderless>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">Random</Menu.Item>
-        <Menu.Item fitted as={NavLink} activeClassName="" exact to="/">Popular</Menu.Item>
+        <Menu.Item fitted as={NavLink} activeClassName="" exact to="/bowls">Popular</Menu.Item>
         <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/">
           <Header as='h1'>Surfer&apos;s Spot</Header>
         </Menu.Item>
