@@ -22,7 +22,7 @@ export default class AboutUs extends React.Component {
                   porttitor, lacus mauris auctor mauris, id molestie lacus dui ac urna.
                 </p>
                 <Header as='h3' style={{ fontSize: '2em' }}>
-                  We&apos; Curated the Best Breaks in Your Area
+                  We&apos;ve Curated the Best Breaks in Your Area
                 </Header>
                 <p style={{ fontSize: '1.33em' }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet pulvinar ligula
