@@ -8,6 +8,10 @@
   backdrop-filter: blur(5px);
   border-radius: 10px;
 }
+.breakCards{
+  background-color: #f2f2f2;
+  padding: 50px;
+}
 
 .footer-background{
   background-color: #333333;
