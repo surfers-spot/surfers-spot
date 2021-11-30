@@ -28,7 +28,7 @@ export default class AboutUs extends React.Component {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet pulvinar ligula
                   viverra rhoncus. Integer pulvinar vulputate justo in feugiat. Duis nisi purus, imperdiet
                   scelerisque eros et, luctus pulvinar neque. In maximus, libero vitae hendrerit porttitor,
-                  lacus mauris auctor mauris, id molestie lacus dui ac urna.
+                  lacus mauris auctor mauris, id molestie lacus dui ac urn.
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
