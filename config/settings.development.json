@@ -12,23 +12,23 @@
   ],
 
   "defaultBreaks": [
-    { "name": "Bowls", "location": "Duke Kahanamoku Lagoon Boardwalk, Honolulu, HI 96815",
+    { "name": "Bowls",
+      "location": "Duke Kahanamoku Lagoon Boardwalk, Honolulu, HI 96815",
       "image": "https://www.surf-forecast.com/system/images/15181/large/Ala-Moana-Bowls.jpg?1450520565",
-      "direction": "Right and Left",
       "type": "Reef",
       "difficulty": "Hard",
       "description": "Add Later"
     },
-    { "name": "Canoes", "location": "Kuhio Beach Park",
+    { "name": "Canoes",
+      "location": "Kuhio Beach Park",
       "image": "http://www.surfboardshack.com/images/breaks/canoes_02.jpg",
-      "direction": "Right and Left",
       "type": "Reef",
       "difficulty": "Easy",
       "description": "Add Later"
     },
-    { "name": "Kewalos", "location": "Kewalo Basin Park",
+    { "name": "Kewalos",
+      "location": "Kewalo Basin Park",
       "image": "http://www.surfboardshack.com/images/breaks/kewalos_02.jpg",
-      "direction": "Right and Left",
       "type": "Reef",
       "difficulty": "Medium",
       "description": "Add Later"

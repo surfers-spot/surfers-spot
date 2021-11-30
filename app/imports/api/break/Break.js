@@ -16,7 +16,6 @@ class BreaksCollection {
       name: { type: String, index: true, unique: true },
       location: String,
       image: String,
-      direction: String,
       type: {
         type: String,
         allowedValues: ['Reef', 'Beach', 'Point', 'none'],
