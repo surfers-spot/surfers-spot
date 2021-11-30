@@ -24,11 +24,11 @@ class BowlsPage extends React.Component {
     return (
       <div>
         <br/>
-        <Segment style={{ padding: '2em', backgroundColor: '#BBFFFF' }} vertical>
+        <Segment style={{ padding: '2em' }} vertical>
           <Header as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
         </Segment>
 
-        <Segment style={{ padding: '0em', backgroundColor: '#9AFFD2' }} vertical>
+        <Segment style={{ padding: '0em' }} vertical>
           <Grid celled='internally' columns='equal' stackable>
             <Grid.Row textAlign='center'>
               <Grid.Column style={{ paddingBottom: '2em', paddingTop: '3em' }}>
@@ -51,35 +51,38 @@ class BowlsPage extends React.Component {
         </Segment>
 
         <div className="break-background">
-        <Segment style={{ padding: '8em 0em' }} vertical >
-          <Grid container stackable verticalAlign='middle'>
-            <Grid.Row>
-              <Grid.Column width={7}>
-                <Header as='h3' style={{ fontSize: '2em' }}>
-                  Catch Your Next Wave at {name}
-                </Header>
-                <p style={{ fontSize: '1.33em' }}>
-                  {description}
-                </p>
-                <Grid.Column style={{ paddingTop: '2em' }} textAlign='center'>
-                  <Button size='huge'>Leave a Review</Button>
+          <Segment style={{ padding: '8em 0em' }} vertical >
+            <Grid container stackable verticalAlign='middle'>
+              <Grid.Row>
+                <Grid.Column className="breakGrid" width={7} >
+                  <Header as='h3' style={{ fontSize: '2em' }}>
+                    Catch Your Next Wave at {name}
+                  </Header>
+                  <p style={{ fontSize: '1.33em' }}>
+                    {description}
+                  </p>
                 </Grid.Column>
-              </Grid.Column>
-              <Grid.Column floated='right' width={9}>
-                <Image bordered rounded size='massive' src={image} />
-              </Grid.Column>
-            </Grid.Row>
-            <Divider
-              as='h4'
-              className='header'
-              horizontal
-              style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-            >
-              <a href='https://www.google.com/maps/place/Duke+Kahanamoku+Lagoon+Boardwalk,+Honolulu,+HI+96815/@21.281753,-157.8415902,17z/data=!3m1!4b1!4m5!3m4!1s0x7c006df60f4b4891:0xe083ee318e49370c!8m2!3d21.281753!4d-157.8394015'>Get Directions</a>
-            </Divider>
-          </Grid>
-        </Segment>
+                <Grid.Column floated='right' width={9}>
+                  <Image bordered rounded size='massive' src={image} />
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column style={{ paddingTop: '2em' }} textAlign='center'>
+                  <Button size='huge' floated='left'>Leave a Review</Button>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
         </div>
+        <Divider
+          as='h4'
+          className='header'
+          horizontal
+          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
+        >
+          <a href='https://www.google.com/maps/place/Duke+Kahanamoku+Lagoon+Boardwalk,+Honolulu,+HI+96815/@21.281753,
+                -157.8415902,17z/data=!3m1!4b1!4m5!3m4!1s0x7c006df60f4b4891:0xe083ee318e49370c!8m2!3d21.281753!4d-157.8394015'>Get Directions</a>
+        </Divider>
       </div>
     );
   }

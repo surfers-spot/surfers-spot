@@ -16,5 +16,9 @@
 }
 
 .break-background{
-  background: url("/images/surfboardBackgroun.jpg") top;
+  background: url("https://wallpaperboat.com/wp-content/uploads/2021/03/20/72360/texture-sand-27.jpg") top;
+}
+
+.breakGrid{
+  background: rgba(255, 255, 255, 1);
 }
