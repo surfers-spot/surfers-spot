@@ -7,7 +7,7 @@ export default class AboutUs extends React.Component {
     return (
       <div>
         <br/>
-        <Header as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>ABOUT US</Header>
+        <Header id="about-us-page" as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>ABOUT US</Header>
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>

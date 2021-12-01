@@ -25,7 +25,7 @@ class BowlsPage extends React.Component {
       <div>
         <br/>
         <Segment style={{ padding: '2em' }} vertical>
-          <Header as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+          <Header id="bowls-page" as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
         </Segment>
 
         <Segment style={{ padding: '0em' }} vertical>
