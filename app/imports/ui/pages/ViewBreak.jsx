@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
 
-class KewalosPage extends React.Component {
+class ViewBreak extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -15,18 +15,17 @@ class KewalosPage extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const name = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'name');
-    const location = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'location');
-    const image = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'image');
-    const type = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'type');
-    const difficulty = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'difficulty');
-    const description = _.pluck(Breaks.collection.find({ name: 'Kewalos' }).fetch(), 'description');
+    const name = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'name');
+    const location = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'location');
+    const image = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'image');
+    const type = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'type');
+    const difficulty = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'difficulty');
+    const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     return (
       <div>
-        <br/>
-        <Segment style={{ padding: '2em' }} vertical>
-          <Header as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
-        </Segment>
+        <div className='titleBackground'>
+          <Header inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+        </div>
 
         <Segment style={{ padding: '0em' }} vertical>
           <Grid celled='internally' columns='equal' stackable>
@@ -41,7 +40,7 @@ class KewalosPage extends React.Component {
                   Type: {type}
                 </Header>
               </Grid.Column>
-              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '2em' }}>
+              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '3em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                   Location: {location}
                 </Header>
@@ -87,15 +86,18 @@ class KewalosPage extends React.Component {
   }
 }
 
-KewalosPage.propTypes = {
+ViewBreak.propTypes = {
   ready: PropTypes.bool.isRequired,
+  breakName: PropTypes.object,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-export default withTracker(() => {
+export default withTracker(({ match }) => {
+  const breakName = match.params.name;
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
   return {
     ready: sub1.ready(),
+    breakName,
   };
-})(KewalosPage);
+})(ViewBreak);

@@ -2,15 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import { _ } from 'meteor/underscore';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Header } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
+import { Breaks } from '../../api/break/Break';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
     const menuStyle = { backgroundColor: 'white' };
+    const randomBreakName = _.sample(Breaks.collection.find({}).fetch());
     return (
+
       <Menu style={menuStyle} attached="top" borderless>
         <Menu.Item as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
         <Menu.Item fitted as={NavLink} activeClassName="" exact to="/bowls">Popular</Menu.Item>

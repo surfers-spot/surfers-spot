@@ -17,10 +17,8 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import AddBreak from '../pages/AddBreak';
-import Bowls from '../pages/Bowls';
-import Canoes from '../pages/Canoes';
-import Kewalos from '../pages/Kewalos';
 import Random from '../pages/Random';
+import ViewBreak from '../pages/ViewBreak';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -35,14 +33,12 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/about" component={AboutUs}/>
-            <Route path="/bowls" component={Bowls}/>
-            <Route path="/canoes" component={Canoes}/>
-            <Route path="/kewalos" component={Kewalos}/>
             <Route path="/random" component={Random}/>
             <ProtectedRoute path="/list" component={ListStuff}/>
             <ProtectedRoute path="/add" component={AddStuff}/>
             <ProtectedRoute path="/addBreak" component={AddBreak}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+            <ProtectedRoute path="/view/:name" component={ViewBreak}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
           </Switch>

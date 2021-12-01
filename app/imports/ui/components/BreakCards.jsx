@@ -1,21 +1,23 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class BreakCard extends React.Component {
   render() {
     return (
       <Card>
-        <Image centered size='small' src={this.props.break.image}/>
+        <Image className='cardImage' fluid src={this.props.break.image}/>
         <Card.Content>
           <Card.Header>{this.props.break.name}</Card.Header>
           <Card.Meta>{this.props.break.location}</Card.Meta>
-          <Card.Description>{this.props.break.description}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           <Card.Header>Difficulty: {this.props.break.difficulty}</Card.Header>
+        </Card.Content>
+        <Card.Content extra>
+          <Link to={`/view/${this.props.break.name}`}>View Break</Link>
         </Card.Content>
       </Card>
     );

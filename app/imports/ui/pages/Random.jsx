@@ -24,10 +24,9 @@ class RandomPage extends React.Component {
     const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
     return (
       <div>
-        <br/>
-        <Segment style={{ padding: '2em' }} vertical>
-          <Header as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
-        </Segment>
+        <div className='titleBackground'>
+          <Header inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+        </div>
 
         <Segment style={{ padding: '0em' }} vertical>
           <Grid celled='internally' columns='equal' stackable>
