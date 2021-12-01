@@ -8,9 +8,21 @@
   backdrop-filter: blur(5px);
   border-radius: 10px;
 }
+.breakCards{
+  background-color: #f2f2f2;
+  padding: 50px;
+}
 
 .footer-background{
   background-color: #333333;
   color: white;
   padding-top: 25px;
+}
+
+.break-background{
+  background: url("https://wallpaperboat.com/wp-content/uploads/2021/03/20/72360/texture-sand-27.jpg") top;
+}
+
+.breakGrid{
+  background: rgba(255, 255, 255, 1);
 }

@@ -13,10 +13,9 @@ class BreaksCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      name: String,
+      name: { type: String, index: true, unique: true },
       location: String,
       image: String,
-      direction: String,
       type: {
         type: String,
         allowedValues: ['Reef', 'Beach', 'Point', 'none'],

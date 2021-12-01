@@ -11,8 +11,8 @@ export default class FooterMenu extends React.Component {
             <List>
               <text style={{ color: 'grey', fontSize: 22, fontFamily: 'Volkhov' }}>Navigate</text><hr/>
               <List.Item as={NavLink} style={{ color: 'white' }} exact to="/about" key='about'>About Us</List.Item>
-              <List.Item>Go to a Random Break</List.Item>
-              <List.Item>Visit a Popular Break</List.Item>
+              <List.Item as={NavLink} style={{ color: 'white' }} exact to="/random" key='random'>Go to a Random Break</List.Item>
+              <List.Item as={NavLink} style={{ color: 'white' }} exact to="/bowls" key='bowls'>Visit a Popular Break</List.Item>
               <List.Item>Break Directory</List.Item>
               <List.Item>Leave a Review</List.Item>
             </List>

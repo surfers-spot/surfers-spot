@@ -29,5 +29,7 @@ if (Breaks.collection.find().count() === 0) {
   if (Meteor.settings.defaultBreaks) {
     console.log('Creating default breaks.');
     Meteor.settings.defaultBreaks.map(data => addBreak(data));
+  } else {
+    console.log('Error initializing default breaks.');
   }
 }
