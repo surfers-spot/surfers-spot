@@ -52,17 +52,17 @@ class AddBreak extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Add a Break</Header>
+          <Header as="h2" textAlign="center" id="addbreak-page">Add a Break</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
-              <TextField name='name'/>
-              <TextField name='location'/>
-              <TextField name='image' />
-              <TextField name='direction' />
-              <SelectField name='type'/>
-              <SelectField name='difficulty'/>
-              <LongTextField name='description'/>
-              <SubmitField value='Submit'/>
+              <TextField name='name' id="break-form-name"/>
+              <TextField name='location' id="break-form-location"/>
+              <TextField name='image' id="break-form-image"/>
+              <TextField name='direction' id="break-form-direction"/>
+              <SelectField name='type' id="break-form-type"/>
+              <SelectField name='difficulty' id="break-form-difficulty"/>
+              <LongTextField name='description' id="break-form-description"/>
+              <SubmitField value='Submit' id="break-form-submit"/>
               <ErrorsField/>
             </Segment>
           </AutoForm>

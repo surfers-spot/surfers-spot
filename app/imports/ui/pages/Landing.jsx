@@ -10,7 +10,7 @@ class Landing extends React.Component {
           <Header inverted as='h1'>Catch your Next Wave</Header>
           <Search size="massive" placeholder="Search for Surf Spots" />
         </Container>
-        <Grid id='landing page' centered stackable columns={3} container>
+        <Grid id='landing-page' centered stackable columns={3} container>
           <Grid.Column textAlign='center' className="blurBackground">
             <Header inverted as='h1'>Breaks</Header>
             <Header inverted as='h3'>Learn about the different surf breaks here on Oahu</Header>

@@ -33,7 +33,7 @@ class App extends React.Component {
             <Route path="/about" component={AboutUs}/>
             <ProtectedRoute path="/list" component={ListStuff}/>
             <ProtectedRoute path="/add" component={AddStuff}/>
-            <ProtectedRoute path="/addBreak" component={AddBreak}/>
+            <Route path="/addBreak" component={AddBreak}/>
             <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
             <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
             <Route component={NotFound}/>
