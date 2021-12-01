@@ -1,9 +1,9 @@
-name: ci-meteor-application-template-react
+name: ci-surfers-spot
 
 on:
   push:
     branches:
-      - master
+      - main
 
 defaults:
   run:

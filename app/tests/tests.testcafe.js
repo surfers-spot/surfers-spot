@@ -42,7 +42,7 @@ test('Test that signin and signout work', async (testController) => {
 });
 
 test
-  .page('http://localhost:3000/#/random,')('Test that Random page shows up', async (testController) => {
+  .page('http://localhost:3000/#/random')('Test that Random page shows up', async (testController) => {
     await randomPage.isDisplayed(testController);
   });
 
