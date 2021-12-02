@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
+import { Link } from 'react-router-dom';
 
 class ViewBreak extends React.Component {
 
@@ -21,6 +22,7 @@ class ViewBreak extends React.Component {
     const type = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'type');
     const difficulty = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
+    const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
     return (
       <div>
         <div className='titleBackground'>
@@ -80,6 +82,13 @@ class ViewBreak extends React.Component {
           style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
         >
           <a href='https://www.google.com/maps/dir//Kewalo+Basin+Park/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x7c006e0760b99bd5:0x4979bfa73a2497e7?sa=X&ved=2ahUKEwiU1aDW0r_0AhW5GDQIHUTGBUkQ9Rd6BAhIEAM'>Get Directions</a>
+        </Divider>
+        <Divider
+          as='h4'
+          className='header'
+          horizontal
+          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}>
+          <Link to={`/edit/${id}`}>Edit</Link>
         </Divider>
       </div>
     );
