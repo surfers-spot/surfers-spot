@@ -4,8 +4,8 @@ import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
-import { Breaks } from '../../api/break/Break';
 import { Link } from 'react-router-dom';
+import { Breaks } from '../../api/break/Break';
 
 class ViewBreak extends React.Component {
 

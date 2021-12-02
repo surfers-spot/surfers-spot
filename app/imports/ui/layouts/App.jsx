@@ -32,7 +32,7 @@ class App extends React.Component {
             <Route path="/about" component={AboutUs}/>
             <Route path="/random" component={Random}/>
             <ProtectedRoute path="/addBreak" component={AddBreak}/>
-            <Route path="/edit/:_id" component={EditBreak}/> {/*Right now anyone can edit, need to add admin functionality*/}
+            <Route path="/edit/:_id" component={EditBreak}/> {/* Right now anyone can edit, need to add admin functionality */}
             <Route path="/view/:name" component={ViewBreak}/>
             <Route component={NotFound}/>
           </Switch>
