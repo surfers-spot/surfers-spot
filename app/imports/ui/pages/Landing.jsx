@@ -22,7 +22,7 @@ class Landing extends React.Component {
             <Header inverted as='h1'>Catch your Next Wave</Header>
             <Search size="massive" placeholder="Search for Surf Spots" />
           </Container>
-          <Grid id='landing page' centered stackable columns={3} container>
+          <Grid id='landing-page' centered stackable columns={3} container>
             <Grid.Column textAlign='center' className="blurBackground">
               <Header inverted as='h1'>Breaks</Header>
               <Header inverted as='h3'>Learn about the different surf breaks here on Oahu</Header>
@@ -39,9 +39,10 @@ class Landing extends React.Component {
             </Grid.Column>
           </Grid>
         </div>
+
         <div className="breakCards">
           <Container id='Break Cards'>
-            <Header as='h1'> Popular Breaks:</Header>
+            <Header as='h1'> Random Breaks:</Header>
             <Card.Group centered>
               {cards.map((breaks, index) => <BreakCards key={index} break={breaks}/>)}
             </Card.Group>

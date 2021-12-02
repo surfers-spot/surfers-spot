@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Header } from 'semantic-ui-react';
+// eslint-disable-next-line no-unused-vars
 import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
@@ -16,9 +17,9 @@ class NavBar extends React.Component {
     return (
 
       <Menu style={menuStyle} attached="top" borderless>
-        <Menu.Item as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
-        <Menu.Item fitted as={NavLink} activeClassName="" exact to="/bowls">Popular</Menu.Item>
-        <Menu.Item position="right" as={NavLink} activeClassName="" exact to="/">
+        <Menu.Item id="navbar-random-page" as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
+        <Menu.Item id="navbar-popular-page" fitted as={NavLink} activeClassName="" exact to="/bowls">Popular</Menu.Item>
+        <Menu.Item id="navbar-landing-page" position="right" as={NavLink} activeClassName="" exact to="/">
           <Header as='h1'>Surfer&apos;s Spot</Header>
         </Menu.Item>
 
