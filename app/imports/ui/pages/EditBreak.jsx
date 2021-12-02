@@ -16,8 +16,8 @@ class EditBreak extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, location, image, direction, type, difficulty, description, _id } = data;
-    Breaks.collection.update(_id, { $set: { name, location, image, direction, type, difficulty, description } }, (error) => (error ?
+    const { name, location, image, type, difficulty, description, _id } = data;
+    Breaks.collection.update(_id, { $set: { name, location, image, type, difficulty, description } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -38,7 +38,6 @@ class EditBreak extends React.Component {
               <TextField name='name'/>
               <TextField name='location'/>
               <TextField name='image' />
-              <TextField name='direction' />
               <SelectField name='type'/>
               <SelectField name='difficulty'/>
               <LongTextField name='description'/>

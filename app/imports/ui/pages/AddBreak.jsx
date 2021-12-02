@@ -57,7 +57,6 @@ class AddBreak extends React.Component {
               <TextField name='name' id="break-form-name"/>
               <TextField name='location' id="break-form-location"/>
               <TextField name='image' id="break-form-image"/>
-              <TextField name='direction' id="break-form-direction"/>
               <SelectField name='type' id="break-form-type"/>
               <SelectField name='difficulty' id="break-form-difficulty"/>
               <LongTextField name='description' id="break-form-description"/>
