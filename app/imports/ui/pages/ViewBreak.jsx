@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { Breaks } from '../../api/break/Break';
+import { Link } from 'react-router-dom';
 
 class ViewBreak extends React.Component {
 

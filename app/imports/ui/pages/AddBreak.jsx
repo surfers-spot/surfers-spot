@@ -33,7 +33,7 @@ class AddBreak extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, location, image, direction, type, difficulty, description } = data;
+    const { name, location, image, type, difficulty, description } = data;
     Breaks.collection.insert({ name, location, image, direction, type, difficulty, description },
       (error) => {
         if (error) {

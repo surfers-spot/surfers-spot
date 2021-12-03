@@ -12,6 +12,7 @@ class NavBar extends React.Component {
     return (
 
       <Menu style={menuStyle} attached="top" borderless>
+        <Menu.Item id="navbar-directory" as={NavLink} activeClassName="" exact to="/directory">Directory</Menu.Item>
         <Menu.Item id="navbar-random-page" as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
         <Menu.Item id="navbar-popular-page" fitted as={NavLink} activeClassName="" exact to="/view/Bowls">Popular</Menu.Item>
         <Menu.Item id="navbar-landing-page" position="right" as={NavLink} activeClassName="" exact to="/">
