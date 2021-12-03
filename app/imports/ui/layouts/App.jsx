@@ -15,8 +15,8 @@ import Signout from '../pages/Signout';
 import AddBreak from '../pages/AddBreak';
 import Random from '../pages/Random';
 import ViewBreak from '../pages/ViewBreak';
-import Directory from '../pages/Directory';
 import EditBreak from '../pages/EditBreak';
+import Directory from '../pages/Directory';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,7 +33,7 @@ class App extends React.Component {
             <Route path="/about" component={AboutUs}/>
             <Route path="/random" component={Random}/>
             <ProtectedRoute path="/addBreak" component={AddBreak}/>
-            <Route path="/edit/:_id" component={EditBreak}/>
+            <Route path="/edit/:_id" component={EditBreak}/> {/* Right now anyone can edit, need to add admin functionality */}
             <Route path="/view/:name" component={ViewBreak}/>
             <Route path="/directory" component={Directory}/>
             <Route component={NotFound}/>

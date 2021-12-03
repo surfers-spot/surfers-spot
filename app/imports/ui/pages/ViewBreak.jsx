@@ -4,6 +4,7 @@ import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
+import { Link } from 'react-router-dom';
 import { Breaks } from '../../api/break/Break';
 import { Link } from 'react-router-dom';
 
@@ -87,7 +88,8 @@ class ViewBreak extends React.Component {
           as='h4'
           className='header'
           horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}>
+          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
+        >
           <Link to={`/edit/${id}`}>Edit</Link>
         </Divider>
       </div>
