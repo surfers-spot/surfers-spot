@@ -24,10 +24,9 @@ class RandomPage extends React.Component {
     const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
     return (
       <div>
-        <br/>
-        <Segment style={{ padding: '2em' }} vertical>
-          <Header id="random-page" as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
-        </Segment>
+        <div className='titleBackground'>
+          <Header id="random-page" inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+        </div>
 
         <Segment style={{ padding: '0em' }} vertical>
           <Grid celled='internally' columns='equal' stackable>
@@ -81,8 +80,7 @@ class RandomPage extends React.Component {
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
         >
-          <a href='https://www.google.com/maps/place/Duke+Kahanamoku+Lagoon+Boardwalk,+Honolulu,+HI+96815/@21.281753,
-                -157.8415902,17z/data=!3m1!4b1!4m5!3m4!1s0x7c006df60f4b4891:0xe083ee318e49370c!8m2!3d21.281753!4d-157.8394015'>Get Directions</a>
+          <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
       </div>
     );
