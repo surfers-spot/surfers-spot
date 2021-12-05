@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
 
 /**
@@ -40,14 +40,14 @@ class Signup extends React.Component {
     }
     return (
       <Container id="signup-page">
-        <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-          <Grid.Column>
-            <Header as="h2" textAlign="center">
-              Register your account
+        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle" centered columns={2}>
+          <Grid.Column style={{ maxWidth: 450 }}>
+            <Header as="h2" color='teal' textAlign="center">
+              <Image src="/images/Logo.png" /> Register your account
             </Header>
-            <Form onSubmit={this.submit}>
+            <Form size='large' onSubmit={this.submit}>
               <Segment stacked>
-                <Form.Input
+                <Form.Input fluid
                   label="Email"
                   id="signup-form-email"
                   icon="user"
@@ -57,7 +57,7 @@ class Signup extends React.Component {
                   placeholder="E-mail address"
                   onChange={this.handleChange}
                 />
-                <Form.Input
+                <Form.Input fluid
                   label="Password"
                   id="signup-form-password"
                   icon="lock"
@@ -67,11 +67,11 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
-                <Form.Button id="signup-form-submit" content="Submit"/>
+                <Form.Button color='teal' fluid size='large' id="signup-form-submit" content="Submit"/>
               </Segment>
             </Form>
             <Message>
-              Already have an account? Login <Link to="/signin">here</Link>
+              Already have an account? <Link to="/signin">Log-in here</Link>
             </Message>
             {this.state.error === '' ? (
               ''
