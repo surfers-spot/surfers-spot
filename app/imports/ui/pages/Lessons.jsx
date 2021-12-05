@@ -144,7 +144,10 @@ export default class Lessons extends React.Component {
                   <Card.Header><a href="https://www.hawaiisurfguru.com/">Hawaii Surf Guru</a></Card.Header>
                   <Card.Meta>7:00 AM - 5:00 PM Everyday</Card.Meta>
                   <Card.Description>
-                    &quot;Private Surf Lessons, Stand Up Paddling Lessons & Private Tours with a Professional Waterman or Waterwoman in Oahu Hawaii Getting in touch with the local surf scene and culture in Oahu Hawaii can be an enriching experience. Kimo Chung, the Hawaii Surf Guru provides all the insight and local information that you need in addition to just surf lessons in Oahu Hawaii. Kimo says, "For many of us; surfing has become a way of life. When the surf is good, many of us become more humble and relaxed with ourselves and others.&quot;
+                    &quot;Private Surf Lessons, Stand Up Paddling Lessons & Private Tours with a Professional Waterman or Waterwoman in Oahu Hawaii
+                    Getting in touch with the local surf scene and culture in Oahu Hawaii can be an enriching experience. Kimo Chung, the Hawaii Surf
+                    Guru provides all the insight and local information that you need in addition to just surf lessons in Oahu Hawaii. Kimo says, &quot;For
+                    many of us; surfing has become a way of life. When the surf is good, many of us become more humble and relaxed with ourselves and others.&quot;
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
@@ -167,7 +170,10 @@ export default class Lessons extends React.Component {
                   <Card.Header><a href="https://www.monizfamilysurf.com/">Moniz Family Surf</a></Card.Header>
                   <Card.Meta>8:30 AM - 6:30 PM Everyday</Card.Meta>
                   <Card.Description>
-                    &quot;Our desire is to give you an authentic Hawaiian Surf Experience from one of the members of our family. All our instructors are certified licensed and have surfed all their lives, competed in professional surf events and are sponsored by Billabong for the last 15 years. We rent boards as well and are right across the street of the Duke Statue and the world renowned surf spot Queens and Canoes. Throw a stone and you are there.&quot;
+                    &quot;Our desire is to give you an authentic Hawaiian Surf Experience from one of the members of our family. All our instructors
+                    are certified licensed and have surfed all their lives, competed in professional surf events and are sponsored by Billabong for the last
+                    15 years. We rent boards as well and are right across the street of the Duke Statue and the world renowned surf spot Queens and Canoes.
+                    Throw a stone and you are there.&quot;
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
@@ -190,7 +196,10 @@ export default class Lessons extends React.Component {
                   <Card.Header><a href="https://hhsurf.com/">Hans Hedemann Surf School-Waikiki</a></Card.Header>
                   <Card.Meta>8:30 AM - 5:00 PM Everyday</Card.Meta>
                   <Card.Description>
-                    &quot;Whether you want to take a lesson or rent a surfboard, Hans Hedemann has you covered. Our award-winning staff will guide you through the waves and teach you all the necessary skills. Waikiki Beach are some of the most iconic places to take your first surfing lesson. You will enjoy the beautiful backdrop of Waikiki Whether you are . beginner, intermediate or advanced surfer, our lessons will benefit you. You are guaranteed to be surfing within the two-hour lesson.&quot;
+                    &quot;Whether you want to take a lesson or rent a surfboard, Hans Hedemann has you covered. Our award-winning staff will
+                    guide you through the waves and teach you all the necessary skills. Waikiki Beach are some of the most iconic places to
+                    take your first surfing lesson. You will enjoy the beautiful backdrop of Waikiki Whether you are . beginner, intermediate
+                    or advanced surfer, our lessons will benefit you. You are guaranteed to be surfing within the two-hour lesson.&quot;
                   </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
