@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Message, Segment, Image } from 'semantic-ui-react';
 
 /**
  * Signin page overrides the form’s submit event and call Meteor’s loginWithPassword().
@@ -21,7 +21,7 @@ export default class Signin extends React.Component {
     this.setState({ [name]: value });
   }
 
-  // Handle Signin submission using Meteor's account mechanism.
+  // Handle Sign-in submission using Meteor's account mechanism.
   submit = () => {
     const { email, password } = this.state;
     Meteor.loginWithPassword(email, password, (err) => {
@@ -43,14 +43,14 @@ export default class Signin extends React.Component {
     // Otherwise return the Login form.
     return (
       <Container id="signin-page">
-        <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-          <Grid.Column>
-            <Header as="h2" textAlign="center">
-              Login to your account
+        <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle" centered columns={2}>
+          <Grid.Column style={{ maxWidth: 450 }}>
+            <Header as="h2" color='teal' textAlign="center">
+              <Image src="/images/sand.jpg" /> Log-in to your account
             </Header>
-            <Form onSubmit={this.submit}>
+            <Form size='large' onSubmit={this.submit}>
               <Segment stacked>
-                <Form.Input
+                <Form.Input fluid
                   label="Email"
                   id="signin-form-email"
                   icon="user"
@@ -60,7 +60,7 @@ export default class Signin extends React.Component {
                   placeholder="E-mail address"
                   onChange={this.handleChange}
                 />
-                <Form.Input
+                <Form.Input fluid
                   label="Password"
                   id="signin-form-password"
                   icon="lock"
@@ -70,11 +70,11 @@ export default class Signin extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
-                <Form.Button id="signin-form-submit" content="Submit"/>
+                <Form.Button color='teal' fluid size='large' id="signin-form-submit" content="Submit"/>
               </Segment>
             </Form>
             <Message>
-              <Link to="/signup">Click here to Register</Link>
+              New to Us? <Link to="/signup">Click here to Register</Link>
             </Message>
             {this.state.error === '' ? (
               ''
