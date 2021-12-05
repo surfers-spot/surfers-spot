@@ -84,7 +84,7 @@ export default class AboutUs extends React.Component {
               horizontal
               style={{ margin: '3em 0em', textTransform: 'uppercase' }}
             >
-              <a href='#'>Join Our Email List</a>
+              <p>Join Our Email List Below</p>
             </Divider>
 
             <Header as='h3' style={{ fontSize: '2em' }}>
