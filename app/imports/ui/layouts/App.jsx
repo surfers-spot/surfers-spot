@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import AboutUs from '../pages/AboutUs';
+import Lessons from '../pages/Lessons';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>
             <Route path="/about" component={AboutUs}/>
+            <Route path="/lessons" component={Lessons}/>
             <Route path="/random" component={Random}/>
             <ProtectedRoute path="/addBreak" component={AddBreak}/>
             <Route path="/edit/:_id" component={EditBreak}/> {/* Right now anyone can edit, need to add admin functionality */}

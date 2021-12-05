@@ -1,14 +1,13 @@
 import React from 'react';
 import { Button, Container, Divider, Grid, Header, Image, Segment } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
 
-export default class AboutUs extends React.Component {
+export default class Lessons extends React.Component {
 
   render() {
     return (
       <div>
         <br/>
-        <Header id="about-us-page" as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>ABOUT US</Header>
+        <Header id="about-us-page" as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>LESSONS</Header>
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
@@ -38,7 +37,7 @@ export default class AboutUs extends React.Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column textAlign='center'>
-                <Button as={NavLink} exact to="/directory" size='huge'>Find a Break Now</Button>
+                <Button size='huge'>Find a Break Now</Button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -96,7 +95,7 @@ export default class AboutUs extends React.Component {
               favorite hobby and we have gathered the best organizations and teachers to help you hang ten with
               the pros in no time. Click the button below to get started.
             </p>
-            <Button as={NavLink} exact to="/lessons" size='large'>
+            <Button as='a' size='large'>
               Find Lessons Near You
             </Button>
           </Container>
