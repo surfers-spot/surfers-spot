@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
 import { Menu, Dropdown, Header } from 'semantic-ui-react';
+import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
@@ -15,6 +16,9 @@ class NavBar extends React.Component {
         <Menu.Item id="navbar-directory" as={NavLink} activeClassName="" exact to="/directory">Directory</Menu.Item>
         <Menu.Item id="navbar-random-page" as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
         <Menu.Item id="navbar-popular-page" fitted as={NavLink} activeClassName="" exact to="/view/Bowls">Popular</Menu.Item>
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Menu.Item as={NavLink} id='navbar-addBreak'activeClassName="active" exact to="/addBreak" key='add-break'>Add Break</Menu.Item>
+        ) : ''}
         <Menu.Item id="navbar-landing-page" position="right" as={NavLink} activeClassName="" exact to="/">
           <Header as='h1'>Surfer&apos;s Spot</Header>
         </Menu.Item>

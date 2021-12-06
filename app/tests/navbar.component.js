@@ -48,6 +48,10 @@ class NavBar {
   async gotoLandingPage(testController) {
     await testController.click('#navbar-landing-page');
   }
+
+  async gotoAddBreakPage(testController){
+    await testController.click('#navbar-addBreak');
+  }
 }
 
 export const navBar = new NavBar();

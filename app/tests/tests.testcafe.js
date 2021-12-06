@@ -14,6 +14,7 @@ import { aboutUsPage } from './aboutus.page';
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'john@foo.com', password: 'changeme' };
+const adminCreds = { username: 'admin@foo.com', password: 'changeme' };
 
 /** Default break to add to see if add break form works */
 const defaultBreak = {
@@ -45,6 +46,14 @@ test
   .page('http://localhost:3000/#/random')('Test that Random page shows up', async (testController) => {
     await randomPage.isDisplayed(testController);
   });
+
+test('Test that addBreaks work', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, adminCreds.username, adminCreds.password);
+  await navBar.isLoggedIn(testController, adminCreds.username);
+  await navBar.gotoAddBreakPage(testController);
+  await addBreakPage.addBreak(testController, defaultBreak);
+});
 
 test('Test random page button works', async (testController) => {
   await navBar.gotoRandomPage(testController);
@@ -82,21 +91,16 @@ test('Test AboutUs page footer link works', async (testController) => {
 });
 
 test
-  .page('http://localhost:3000/#/kewalos')('Test that Kewalos page shows up', async (testController) => {
+  .page('http://localhost:3000/#/view/Kewalos')('Test that Kewalos page shows up', async (testController) => {
     await kewalosPage.isDisplayed(testController);
   });
 
 test
-  .page('http://localhost:3000/#/bowls')('Test that Bowls page shows up', async (testController) => {
+  .page('http://localhost:3000/#/view/Bowls')('Test that Bowls page shows up', async (testController) => {
     await bowlsPage.isDisplayed(testController);
   });
 
 test
-  .page('http://localhost:3000/#/canoes')('Test that Canoes page shows up', async (testController) => {
+  .page('http://localhost:3000/#/view/Canoes')('Test that Canoes page shows up', async (testController) => {
     await canoesPage.isDisplayed(testController);
-  });
-
-test
-  .page('http://localhost:3000/#/addBreak')('Test that Add Break form works', async (testController) => {
-    await addBreakPage.addBreak(testController, defaultBreak);
   });

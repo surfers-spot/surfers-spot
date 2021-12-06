@@ -23,10 +23,12 @@ class ViewBreak extends React.Component {
     const difficulty = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
+    const pageId = `${this.props.breakName}-page`;
+    console.log(pageId);
     return (
       <div>
         <div className='titleBackground'>
-          <Header inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+          <Header id={pageId} inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
         </div>
 
         <Segment style={{ padding: '0em' }} vertical>
