@@ -34,8 +34,8 @@ class App extends React.Component {
             <Route path="/about" component={AboutUs}/>
             <Route path="/lessons" component={Lessons}/>
             <Route path="/random" component={Random}/>
-            <ProtectedRoute path="/addBreak" component={AddBreak}/>
-            <Route path="/edit/:_id" component={EditBreak}/> {/* Right now anyone can edit, need to add admin functionality */}
+            <ProtectedRoute path="/add-break" component={AddBreak}/>
+            <AdminProtectedRoute path="/edit/:_id" component={EditBreak}/>
             <Route path="/view/:name" component={ViewBreak}/>
             <Route path="/directory" component={Directory}/>
             <Route component={NotFound}/>

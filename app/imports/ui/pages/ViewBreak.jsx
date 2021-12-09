@@ -85,14 +85,16 @@ class ViewBreak extends React.Component {
         >
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
-        <Divider
-          as='h4'
-          className='header'
-          horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
-        >
-          <Link to={`/edit/${id}`}>Edit</Link>
-        </Divider>
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Divider
+            as='h4'
+            className='header'
+            horizontal
+            style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
+          >
+            <Link to={`/edit/${id}`}>Edit</Link>
+          </Divider>
+        ) : ''}
       </div>
     );
   }
