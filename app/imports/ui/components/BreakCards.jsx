@@ -1,10 +1,34 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Button, Card, Divider, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+import { Meteor } from 'meteor/meteor';
+import swal from 'sweetalert';
+import { Breaks } from '../../api/break/Break';
 
-/** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
+/** Renders a card of a break from the Breaks collection. */
 class BreakCard extends React.Component {
+
+  delete(id) {
+    swal({
+           title: "Are you sure?",
+           text: "Once deleted, you will not be able to recover this break!",
+           icon: "warning",
+           buttons: true,
+           dangerMode: true,
+         })
+    .then((willDelete) => {
+      if (willDelete) {
+        Breaks.collection.remove(id);
+        swal("Break Successfully Deleted", {
+          icon: "success",
+        });
+      } else {
+        swal("Successfully Cancelled.");
+      }
+    });
+  };
+
   render() {
     return (
       <Card>
@@ -19,6 +43,16 @@ class BreakCard extends React.Component {
         <Card.Content extra>
           <Link to={`/view/${this.props.break.name}`}>View Break</Link>
         </Card.Content>
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Card.Content extra>
+            <Link to={`/edit/${this.props.break._id}`}>Edit</Link>
+          </Card.Content>
+        ) : ''}
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Card.Content extra>
+            <Button onClick={this.delete.bind(this, this.props.break._id)}> Delete </Button>
+          </Card.Content>
+        ) : ''}
       </Card>
     );
   }
