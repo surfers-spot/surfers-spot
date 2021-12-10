@@ -35,7 +35,7 @@
 
 .ui.search > .results {
   top: 100% !important;
-  left: 25% !important;
-  margin-top: 0em !important;
-  width: 13em !important;
+  left: 35% !important;
+  margin-top: 0 !important;
+  width: 12.5em !important;
 }

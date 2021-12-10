@@ -100,7 +100,7 @@ class ViewBreak extends React.Component {
 
 ViewBreak.propTypes = {
   ready: PropTypes.bool.isRequired,
-  breakName: PropTypes.object,
+  breakName: PropTypes.string,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
