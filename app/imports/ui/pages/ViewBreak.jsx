@@ -24,7 +24,7 @@ class ViewBreak extends React.Component {
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
     const pageId = `${this.props.breakName}-page`;
-    console.log(pageId);
+
     return (
       <div>
         <div className='titleBackground'>

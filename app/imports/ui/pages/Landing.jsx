@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Grid, Header, Search, Container, Card, Loader } from 'semantic-ui-react';
+import { Grid, Header, Container, Card, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import BreakCards from '../components/BreakCards';
 import { Breaks } from '../../api/break/Break';
+import SearchBar from '../components/SearchBar';
 
-/** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Loading</Loader>;
@@ -20,7 +20,9 @@ class Landing extends React.Component {
         <div className="surfers-spot-background">
           <Container textAlign="center" style={{ padding: 50 }}>
             <Header inverted as='h1'>Catch your Next Wave</Header>
-            <Search size="massive" placeholder="Search for Surf Spots" />
+            <div>
+              <SearchBar/>
+            </div>
           </Container>
           <Grid id='landing-page' centered stackable columns={3} container>
             <Grid.Column textAlign='center' className="blurBackground">
