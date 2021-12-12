@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
 // General level publication. Will publish everything in the collection.

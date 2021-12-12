@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Card, Divider, Image } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import swal from 'sweetalert';
+import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
 /** Renders a card of a break from the Breaks collection. */
@@ -11,23 +12,23 @@ class BreakCard extends React.Component {
 
   delete(id) {
     swal({
-           title: "Are you sure?",
-           text: "Once deleted, you will not be able to recover this break!",
-           icon: "warning",
-           buttons: true,
-           dangerMode: true,
-         })
-    .then((willDelete) => {
-      if (willDelete) {
-        Breaks.collection.remove(id);
-        swal("Break Successfully Deleted", {
-          icon: "success",
-        });
-      } else {
-        swal("Successfully Cancelled.");
-      }
-    });
-  };
+      title: 'Are you sure?',
+      text: 'Once deleted, you will not be able to recover this break!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          Breaks.collection.remove(id);
+          swal('Break Successfully Deleted', {
+            icon: 'success',
+          });
+        } else {
+          swal('Successfully Cancelled.');
+        }
+      });
+  }
 
   render() {
     return (

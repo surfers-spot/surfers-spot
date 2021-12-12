@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
 class ViewBreak extends React.Component {
