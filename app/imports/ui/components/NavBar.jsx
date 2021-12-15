@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown, Header } from 'semantic-ui-react';
-import { Roles } from 'meteor/alanning:roles';
+import { Menu, Dropdown, Header, Image } from 'semantic-ui-react';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
@@ -15,12 +14,16 @@ class NavBar extends React.Component {
       <Menu style={menuStyle} attached="top" borderless>
         <Menu.Item id="navbar-directory" as={NavLink} activeClassName="" exact to="/directory">Directory</Menu.Item>
         <Menu.Item id="navbar-random-page" as={NavLink} activeClassName="" exact to="/random">Random</Menu.Item>
-        <Menu.Item id="navbar-popular-page" fitted as={NavLink} activeClassName="" exact to="/view/Bowls">Popular</Menu.Item>
-        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Menu.Item as={NavLink} id='navbar-addBreak'activeClassName="active" exact to="/add-break" key='add-break'>Add Break</Menu.Item>
-        ) : ''}
-        <Menu.Item id="navbar-landing-page" position="right" as={NavLink} activeClassName="" exact to="/">
+        <Menu.Item id="navbar-popular-page" as={NavLink} activeClassName="" exact to="/view/Bowls">Popular</Menu.Item>
+        <Menu.Item id="navbar-lessons" as={NavLink} activeClassName="" exact to="/lessons">Lessons</Menu.Item>
+        <Menu.Item id="navbar-about-us" as={NavLink} activeClassName="" exact to="/about">About Us</Menu.Item>
+
+        <Menu.Item id="navbar-landing-page" fitted position="right" as={NavLink} activeClassName="" exact to="/">
           <Header as='h1'>Surfer&apos;s Spot</Header>
+        </Menu.Item>
+
+        <Menu.Item id="navbar-landing-page" position="left" as={NavLink} activeClassName="" exact to="/">
+          <Image src='/images/Logo.png' ui={false} />
         </Menu.Item>
 
         <Menu.Item position="right">
