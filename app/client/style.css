@@ -8,6 +8,12 @@
   background: url("/images/Background.jpg") top;
   padding: 2em;
 }
+
+.lessonBackground{
+  background-size: cover !important;
+  background: url("/images/surfboardBackgroun.jpg") bottom;
+}
+
 .blurBackground {
   backdrop-filter: blur(5px);
   border-radius: 10px;
