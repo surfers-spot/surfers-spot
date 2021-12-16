@@ -15,8 +15,8 @@ import { admin } from './admin.page';
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
-const credentials = { username: 'john@foo.com', password: 'changeme' };
-const adminCreds = { username: 'admin@foo.com', password: 'changeme' };
+const credentials = { username: 'johnsmith@gmail.com', password: 'aerhba' };
+const adminCreds = { username: 'surfadmin@gmail.com', password: 'adminpass' };
 
 /** Default break added to see if add, edit and delete works */
 const defaultBreak = {

@@ -1,7 +1,29 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "surfadmin@gmail.com", "password": "adminpass", "role": "admin" },
+    { "email": "johnsmith@gmail.com", "password": "aerhba" },
+    { "email": "jaysonleatrice@gmail.com", "password": "bsrerg" },
+    { "email": "seymourscottie@gmail.com", "password": "qebhaqehn" },
+    { "email": "marshalsandford@gmail.com", "password": "vdfbwrty" },
+    { "email": "raschellereginald@gmail.com", "password": "mnyrfdr" },
+    { "email": "robertjudi@gmail.com", "password": "oireut" },
+    { "email": "rodolphelyse@gmail.com", "password": "etryns" },
+    { "email": "casecolumbine@gmail.com", "password": "wrymsae" },
+    { "email": "tabbyhester@gmail.com", "password": "tymdgdx" },
+    { "email": "kristinerosie@gmail.com", "password": "reatae" },
+    { "email": "tillieanona@gmail.com", "password": "ersdbre" },
+    { "email": "olyviadutch@gmail.com", "password": "jytsaerh" },
+    { "email": "venetiakarson@gmail.com", "password": "bgfbsrt" },
+    { "email": "tabathapattie@gmail.com", "password": "ysdfgert" },
+    { "email": "cierarae@gmail.com", "password": "veardgbd" },
+    { "email": "idelleleigh@gmail.com", "password": "raebre" },
+    { "email": "magnoliaalphonso@gmail.com", "password": "tryjiadv" },
+    { "email": "normandtommy@gmail.com", "password": "wryfrber" },
+    { "email": "algerchristabel@gmail.com", "password": "vdsrth" },
+    { "email": "marilouomar@gmail.com", "password": "fcjntgy" },
+    { "email": "winnieoliver@gmail.com", "password": "zcsrfe" },
+    { "email": "kourtneycharlton@gmail.com", "password": "erbvzd" },
+    { "email": "andrinaanabelle@gmail.com", "password": "bvgtusse" }
   ],
 
   "defaultData": [
@@ -15,7 +37,7 @@
     },
     { "name": "Backdoor",
       "location": "Ehukai Beach Park",
-      "image": "https://www.surf-forecast.com/system/images/4295/large/Banzai-Pipelines-and-Backdoor.jpg?1324521720",
+      "image": "https://www.privatetourshawaii.com/uploads/2/4/1/4/24149144/sup-backdoor-shootout-pipeline-hawaii-11th-jan-2019-by-pedro-gomes-ped-7472_orig.jpg",
       "type": "Reef",
       "difficulty": "Hard",
       "description": "This break point is right next to the famous Pipeline but still has some perfect right-hand barrels. Be careful of the shallow reef. While this isn't Pipeline is still has some really advanced surfs so keep it viewer only if you aren't advanced.",
