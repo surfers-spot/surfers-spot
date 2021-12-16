@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Divider, Container } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider, Container, Feed } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -97,8 +97,9 @@ class ViewBreak extends React.Component {
           </Divider>
         ) : ''}
         <Container>
-          <Header as='h3' style={{ fontSize: '3em', textAlign: 'left' }}>Reviews</Header>
-          {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          <Feed>
+            {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          </Feed>
         </Container>
         <Container>
           <AddReview name={this.props.breakName}/>
@@ -110,7 +111,7 @@ class ViewBreak extends React.Component {
 
 ViewBreak.propTypes = {
   ready: PropTypes.bool.isRequired,
-  breakName: PropTypes.string,
+  breakName: PropTypes.object,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Divider, Container } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider, Container, Feed } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
-import Review from '../components/Review';
-import AddReview from '../components/AddReview';
 import { Reviews } from '../../api/review/Review';
+import AddReview from '../components/AddReview';
+import Review from '../components/Review';
 
 class RandomPage extends React.Component {
 
@@ -26,6 +26,7 @@ class RandomPage extends React.Component {
     const difficulty = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
     const reviews = _.pluck(Reviews.collection.find({ breakName: page }).fetch(), 'text');
+
     return (
       <div>
         <div className='titleBackground'>
@@ -82,8 +83,9 @@ class RandomPage extends React.Component {
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
         <Container>
-          <Header as='h3' style={{ fontSize: '3em', textAlign: 'left' }}>Reviews</Header>
-          {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          <Feed>
+            {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          </Feed>
         </Container>
         <Container>
           <AddReview name={page}/>
