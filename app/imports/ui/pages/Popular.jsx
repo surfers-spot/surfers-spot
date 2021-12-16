@@ -4,11 +4,9 @@ import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
-import { Link } from 'react-router-dom';
-import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
-class ViewBreak extends React.Component {
+class PopularPage extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -17,21 +15,17 @@ class ViewBreak extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const name = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'name');
-    const location = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'location');
-    const image = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'image');
-    const type = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'type');
-    const difficulty = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'difficulty');
-    const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
-    const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
-    const views = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'viewed') + 1;
-    const pageId = `${this.props.breakName}-page`;
-    Breaks.collection.update(id[0], { $inc: { viewed: 1 } });
-
+    const test = _.map(Breaks.collection.find().fetch(), function(item) { return { name: item.name, views: item.viewed } });
+    const page = (_.max(test, function(item) { return item.views })).name;
+    const location = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'location');
+    const image = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'image');
+    const type = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'type');
+    const difficulty = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'difficulty');
+    const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
     return (
       <div>
         <div className='titleBackground'>
-          <Header id={pageId} inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{name}</Header>
+          <Header id="popular-page" inverted as='h3' style={{ fontSize: '4em', textAlign: 'center' }}>{page}</Header>
         </div>
 
         <Segment style={{ padding: '0em' }} vertical>
@@ -47,7 +41,7 @@ class ViewBreak extends React.Component {
                   Type: {type}
                 </Header>
               </Grid.Column>
-              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '3em' }}>
+              <Grid.Column style={{ paddingBottom: '2em', paddingTop: '2em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>
                   Location: {location}
                 </Header>
@@ -62,7 +56,7 @@ class ViewBreak extends React.Component {
               <Grid.Row>
                 <Grid.Column className="breakGrid" width={7} >
                   <Header as='h3' style={{ fontSize: '2em' }}>
-                    Catch Your Next Wave at {name}
+                    Catch Your Next Wave at {page}
                   </Header>
                   <p style={{ fontSize: '1.33em' }}>
                     {description}
@@ -88,33 +82,20 @@ class ViewBreak extends React.Component {
         >
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
-        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-          <Divider
-            as='h4'
-            className='header'
-            horizontal
-            style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
-          >
-            <Link to={`/edit/${id}`}>Edit</Link>
-          </Divider>
-        ) : ''}
       </div>
     );
   }
 }
 
-ViewBreak.propTypes = {
+PopularPage.propTypes = {
   ready: PropTypes.bool.isRequired,
-  breakName: PropTypes.string,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
-export default withTracker(({ match }) => {
-  const breakName = match.params.name;
+export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
   return {
     ready: sub1.ready(),
-    breakName,
   };
-})(ViewBreak);
+})(PopularPage);
