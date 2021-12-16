@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -64,11 +64,6 @@ class PopularPage extends React.Component {
                 </Grid.Column>
                 <Grid.Column floated='right' width={9}>
                   <Image bordered rounded size='massive' src={image} />
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column style={{ paddingTop: '2em' }} textAlign='center'>
-                  <Button size='huge' floated='left'>Leave a Review</Button>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
