@@ -1,9 +1,35 @@
 import React from 'react';
 import { Grid, List, Input } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
+import { AutoForm } from 'uniforms-semantic';
+import swal from 'sweetalert';
+import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
+import SimpleSchema from 'simpl-schema';
+import { Emails } from '../../api/emails/Emails';
+
+const formSchema = new SimpleSchema({
+  email: String,
+});
+
+const bridge = new SimpleSchema2Bridge(formSchema);
 
 export default class FooterMenu extends React.Component {
+
+  submit(data, formRef) {
+    const { email } = data;
+    Emails.collection.insert({ email },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'You have been added to the email list', 'success');
+          formRef.reset();
+        }
+      });
+  }
+
   render() {
+    let fRef = null;
     return (
       <div className="footer-background">
         <Grid container centered stackable columns={3}>
@@ -35,16 +61,19 @@ export default class FooterMenu extends React.Component {
               <List.Item>Want to be informed when new breaks are added?</List.Item>
               <List.Item>Enter your email below to stay informed</List.Item>
               <List.Item>
-                <Input
-                  action={{
-                    color: 'teal',
-                    labelPosition: 'left',
-                    icon: 'envelope',
-                    content: 'JOIN',
-                  }}
-                  actionPosition='left'
-                  placeholder='Enter email address'
-                />
+                <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+                  <Input
+                    action={{
+                      color: 'teal',
+                      labelPosition: 'left',
+                      icon: 'envelope',
+                      content: 'JOIN',
+                      onClick: () => swal('Success', 'Expect to hear from us soon', 'success'),
+                    }}
+                    actionPosition='left'
+                    placeholder='Enter email address'
+                  />
+                </AutoForm>
               </List.Item>
             </List>
           </Grid.Column>
