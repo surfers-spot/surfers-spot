@@ -1,12 +1,15 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Button, Divider, Container, Feed } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
+import { Reviews } from '../../api/review/Review';
+import AddReview from '../components/AddReview';
+import Review from '../components/Review';
 
 class ViewBreak extends React.Component {
 
@@ -27,6 +30,7 @@ class ViewBreak extends React.Component {
     const views = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'viewed') + 1;
     const pageId = `${this.props.breakName}-page`;
     Breaks.collection.update(id[0], { $inc: { viewed: 1 } });
+    const reviews = _.pluck(Reviews.collection.find({ breakName: this.props.breakName }).fetch(), 'text');
 
     return (
       <div>
@@ -98,6 +102,14 @@ class ViewBreak extends React.Component {
             <Link to={`/edit/${id}`}>Edit</Link>
           </Divider>
         ) : ''}
+        <Container>
+          <Feed>
+            {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          </Feed>
+        </Container>
+        <Container>
+          <AddReview name={this.props.breakName}/>
+        </Container>
       </div>
     );
   }
@@ -105,7 +117,7 @@ class ViewBreak extends React.Component {
 
 ViewBreak.propTypes = {
   ready: PropTypes.bool.isRequired,
-  breakName: PropTypes.string,
+  breakName: PropTypes.object,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
@@ -113,8 +125,9 @@ export default withTracker(({ match }) => {
   const breakName = match.params.name;
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
+  const sub2 = Meteor.subscribe(Reviews.userPublicationName)
   return {
-    ready: sub1.ready(),
+    ready: sub1.ready() && sub2.ready(),
     breakName,
   };
 })(ViewBreak);
