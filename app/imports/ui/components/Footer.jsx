@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, List } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
-import { Mails } from '../../api/mail/Mail';
 import AddMail from '../components/AddMail';
 
 export default class FooterMenu extends React.Component {
