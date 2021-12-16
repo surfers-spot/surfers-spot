@@ -10,6 +10,13 @@ Meteor.publish(Breaks.userPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(Reviews.userPublicationName, function () {
+  if (true) {
+    return Reviews.collection.find();
+  }
+  return this.ready();
+});
+
 Meteor.publish(Emails.userPublicationName, function () {
   if (true) {
     return Emails.collection.find();
