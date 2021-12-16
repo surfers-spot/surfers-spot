@@ -15,8 +15,8 @@ class PopularPage extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
-    const test = _.map(Breaks.collection.find().fetch(), function(item) { return { name: item.name, views: item.viewed } });
-    const page = (_.max(test, function(item) { return item.views })).name;
+    const popular = _.map(Breaks.collection.find().fetch(), function (item) { return { name: item.name, views: item.viewed }; });
+    const page = (_.max(popular, function (item) { return item.views; })).name;
     const location = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'location');
     const image = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'image');
     const type = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'type');

@@ -27,7 +27,6 @@ class ViewBreak extends React.Component {
     const difficulty = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
-    const views = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'viewed') + 1;
     const pageId = `${this.props.breakName}-page`;
     Breaks.collection.update(id[0], { $inc: { viewed: 1 } });
     const reviews = _.pluck(Reviews.collection.find({ breakName: this.props.breakName }).fetch(), 'text');
@@ -125,7 +124,7 @@ export default withTracker(({ match }) => {
   const breakName = match.params.name;
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
-  const sub2 = Meteor.subscribe(Reviews.userPublicationName)
+  const sub2 = Meteor.subscribe(Reviews.userPublicationName);
   return {
     ready: sub1.ready() && sub2.ready(),
     breakName,
