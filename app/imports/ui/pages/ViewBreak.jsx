@@ -97,9 +97,8 @@ class ViewBreak extends React.Component {
           </Divider>
         ) : ''}
         <Container>
-          <Feed>
-            {reviews.map((text, index) => <Review key={index} text={text}/>)}
-          </Feed>
+          <Header as='h3' style={{ fontSize: '2em', textAlign: 'left' }}>Reviews:</Header>
+          {reviews.map((text, index) => <Review key={index} text={text}/>)}
         </Container>
         <Container>
           <AddReview name={this.props.breakName}/>
