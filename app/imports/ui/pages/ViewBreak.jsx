@@ -97,7 +97,7 @@ class ViewBreak extends React.Component {
           </Divider>
         ) : ''}
         <Container>
-          <Header as='h3' style={{ fontSize: '2em', textAlign: 'left' }}>Reviews:</Header>
+          <Header as='h3' style={{ fontSize: '2em', textAlign: 'left', paddingBottom: '1em' }}>Reviews:</Header>
           {reviews.map((text, index) => <Review key={index} text={text}/>)}
         </Container>
         <Container>
