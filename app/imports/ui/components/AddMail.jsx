@@ -34,7 +34,7 @@ class AddMail extends React.Component {
       <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
           <HiddenField name='list' value={this.props.name}/>
-          <TextField label="Enter your email below: " name='email'/>
+          <TextField placeholder="Enter email address" label="Enter your email below: " name='email'/>
           <SubmitField value='Submit'/>
           <ErrorsField/>
         </Segment>
