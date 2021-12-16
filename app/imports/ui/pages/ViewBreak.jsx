@@ -28,12 +28,7 @@ class ViewBreak extends React.Component {
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
     const pageId = `${this.props.breakName}-page`;
-<<<<<<< Updated upstream
-    console.log(pageId);
-=======
     const reviews = _.pluck(Reviews.collection.find({ breakName: this.props.breakName }).fetch(), 'text');
-  console.log(reviews);
->>>>>>> Stashed changes
     return (
       <div>
         <div className='titleBackground'>
