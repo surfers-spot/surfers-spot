@@ -36,7 +36,7 @@ export default class FooterMenu extends React.Component {
               <List.Item>Want to be informed when new breaks are added?</List.Item>
               <List.Item>Enter your email below to stay informed</List.Item>
               <List.Item>
-                <AddMail name="mailing list"/>
+                <AddMail name="general mailing"/>
               </List.Item>
             </List>
           </Grid.Column>
