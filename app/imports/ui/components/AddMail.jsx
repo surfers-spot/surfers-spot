@@ -15,8 +15,8 @@ class AddMail extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { breakName, text } = data;
-    Mails.collection.insert({ breakName, text },
+    const { list, email } = data;
+    Mails.collection.insert({ list, email },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -33,8 +33,8 @@ class AddMail extends React.Component {
     return (
       <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
-          <HiddenField name='breakName' value={this.props.name}/>
-          <TextField label="Enter your email below: " name='text'/>
+          <HiddenField name='list' value={this.props.name}/>
+          <TextField label="Enter your email below: " name='email'/>
           <SubmitField value='Submit'/>
           <ErrorsField/>
         </Segment>
