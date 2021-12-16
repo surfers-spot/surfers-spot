@@ -30,18 +30,18 @@ class EditBreak extends React.Component {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   renderPage() {
     return (
-      <Grid container centered>
+      <Grid container centered id="edit-break">
         <Grid.Column>
           <Header as="h2" textAlign="center">Edit a Break</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
-              <TextField name='name'/>
-              <TextField name='location'/>
-              <TextField name='image' />
-              <SelectField name='type'/>
-              <SelectField name='difficulty'/>
-              <LongTextField name='description'/>
-              <SubmitField value='Submit'/>
+              <TextField name='name' id="edit-form-name"/>
+              <TextField name='location' id="edit-form-location"/>
+              <TextField name='image' id="edit-form-image"/>
+              <SelectField name='type' id="edit-form-type"/>
+              <SelectField name='difficulty' id="edit-form-difficulty"/>
+              <LongTextField name='description' id="edit-form-description"/>
+              <SubmitField value='Submit' id="edit-form-submit"/>
               <ErrorsField/>
             </Segment>
           </AutoForm>
