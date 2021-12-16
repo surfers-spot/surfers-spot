@@ -50,7 +50,7 @@ class NavBar {
   }
 
   async gotoAddBreakPage(testController){
-    await testController.click('#navbar-addBreak');
+    await testController.click('#navbar-add-break');
   }
 
   async gotoDirectoryPage(testController){

@@ -17,7 +17,9 @@ class NavBar extends React.Component {
         <Menu.Item id="navbar-popular-page" as={NavLink} activeClassName="" exact to="/view/Bowls">Popular</Menu.Item>
         <Menu.Item id="navbar-lessons" as={NavLink} activeClassName="" exact to="/lessons">Lessons</Menu.Item>
         <Menu.Item id="navbar-about-us" as={NavLink} activeClassName="" exact to="/about">About Us</Menu.Item>
-
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Menu.Item as={NavLink} id='navbar-add-break'activeClassName="active" exact to="/add-break" key='add-break'>Add Break</Menu.Item>
+        ) : ''}
         <Menu.Item id="navbar-landing-page" fitted position="right" as={NavLink} activeClassName="" exact to="/">
           <Header as='h1'>Surfer&apos;s Spot</Header>
         </Menu.Item>
