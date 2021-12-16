@@ -1,10 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Divider } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider, Container, Feed } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
+import { Reviews } from '../../api/review/Review';
+import AddReview from '../components/AddReview';
+import Review from '../components/Review';
 
 class RandomPage extends React.Component {
 
@@ -22,6 +25,8 @@ class RandomPage extends React.Component {
     const type = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'type');
     const difficulty = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
+    const reviews = _.pluck(Reviews.collection.find({ breakName: page }).fetch(), 'text');
+
     return (
       <div>
         <div className='titleBackground'>
@@ -77,6 +82,14 @@ class RandomPage extends React.Component {
         >
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
+        <Container>
+          <Feed>
+            {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          </Feed>
+        </Container>
+        <Container>
+          <AddReview name={page}/>
+        </Container>
       </div>
     );
   }
@@ -90,7 +103,8 @@ RandomPage.propTypes = {
 export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
+  const sub2 = Meteor.subscribe(Reviews.userPublicationName);
   return {
-    ready: sub1.ready(),
+    ready: sub1.ready() && sub2.ready(),
   };
 })(RandomPage);
