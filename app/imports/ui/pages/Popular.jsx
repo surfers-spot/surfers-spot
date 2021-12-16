@@ -1,10 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider, Container } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
+import { Reviews } from '../../api/review/Review';
+import Review from '../components/Review';
+import AddReview from '../components/AddReview';
 
 class PopularPage extends React.Component {
 
@@ -22,6 +25,7 @@ class PopularPage extends React.Component {
     const type = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'type');
     const difficulty = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'difficulty');
     const description = _.pluck(Breaks.collection.find({ name: page }).fetch(), 'description');
+    const reviews = _.pluck(Reviews.collection.find({ breakName: page }).fetch(), 'text');
     return (
       <div>
         <div className='titleBackground'>
@@ -66,11 +70,6 @@ class PopularPage extends React.Component {
                   <Image bordered rounded size='massive' src={image} />
                 </Grid.Column>
               </Grid.Row>
-              <Grid.Row>
-                <Grid.Column style={{ paddingTop: '2em' }} textAlign='center'>
-                  <Button size='huge' floated='left'>Leave a Review</Button>
-                </Grid.Column>
-              </Grid.Row>
             </Grid>
           </Segment>
         </div>
@@ -82,6 +81,13 @@ class PopularPage extends React.Component {
         >
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
+        <Container>
+          <Header as='h3' style={{ fontSize: '3em', textAlign: 'left' }}>Reviews</Header>
+          {reviews.map((text, index) => <Review key={index} text={text}/>)}
+        </Container>
+        <Container>
+          <AddReview name={page}/>
+        </Container>
       </div>
     );
   }
@@ -95,7 +101,8 @@ PopularPage.propTypes = {
 export default withTracker(() => {
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
+  const sub2 = Meteor.subscribe(Reviews.userPublicationName);
   return {
-    ready: sub1.ready(),
+    ready: sub1.ready() && sub2.ready(),
   };
 })(PopularPage);

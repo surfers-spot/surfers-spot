@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feed } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -7,13 +7,9 @@ import { withRouter } from 'react-router-dom';
 class Review extends React.Component {
   render() {
     return (
-      <Feed.Event >
-        <Feed.Content>
-          <Feed.Summary>
-            {this.props.text}
-          </Feed.Summary>
-        </Feed.Content>
-      </Feed.Event>
+      <Segment style={{ fontSize: '1.2em' }}>
+        {this.props.text}
+      </Segment>
     );
   }
 }

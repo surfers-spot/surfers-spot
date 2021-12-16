@@ -1,6 +1,6 @@
 import React from 'react';
 import { Segment } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SubmitField, TextField, HiddenField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, LongTextField, HiddenField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import PropTypes from 'prop-types';
@@ -21,8 +21,12 @@ class AddReview extends React.Component {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Note added successfully', 'success');
+          swal('Success', 'Review added successfully', 'success');
           formRef.reset();
+
+          /** Have to disable the following so it can reload the page after each addition to the review collection * */
+          // eslint-disable-next-line no-undef
+          window.location.reload(false);
         }
       });
   }
@@ -32,9 +36,9 @@ class AddReview extends React.Component {
     let fRef = null;
     return (
       <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-        <Segment>
+        <Segment style={{ marginTop: '16.8px', marginBottom: '16.8px' }}>
           <HiddenField name='breakName' value={this.props.name}/>
-          <TextField label="Add a Review" name='text'/>
+          <LongTextField label="Leave a Review" name='text'/>
           <SubmitField value='Submit'/>
           <ErrorsField/>
         </Segment>
