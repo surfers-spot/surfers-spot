@@ -18,6 +18,7 @@ import Random from '../pages/Random';
 import ViewBreak from '../pages/ViewBreak';
 import EditBreak from '../pages/EditBreak';
 import Directory from '../pages/Directory';
+import Popular from '../pages/Popular';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -38,6 +39,7 @@ class App extends React.Component {
             <AdminProtectedRoute path="/edit/:_id" component={EditBreak}/>
             <Route path="/view/:name" component={ViewBreak}/>
             <Route path="/directory" component={Directory}/>
+            <Route path="/popular" component={Popular} />
             <Route component={NotFound}/>
           </Switch>
           <Footer/>

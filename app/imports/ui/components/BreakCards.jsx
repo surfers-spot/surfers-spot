@@ -37,6 +37,9 @@ class BreakCard extends React.Component {
         <Card.Content>
           <Card.Header>{this.props.break.name}</Card.Header>
           <Card.Meta>{this.props.break.location}</Card.Meta>
+          {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+            <Card.Meta id="views">Views - {this.props.break.viewed}</Card.Meta>
+          ) : ''}
         </Card.Content>
         <Card.Content extra>
           <Card.Header>Difficulty: {this.props.break.difficulty}</Card.Header>

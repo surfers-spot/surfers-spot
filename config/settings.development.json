@@ -10,147 +10,168 @@
       "image": "https://www.outdoorproject.com/sites/default/files/styles/hero_image_desktop/public/features/_dsc8041.jpg?itok=31c9bcBV",
       "type": "Reef",
       "difficulty": "Hard",
-      "description": "Be careful out there as Ali’i beach park can get some nice barrels. This is a great area for the experienced surfer looking for a high-performance spot. Punchy rights and lefts on offer."
+      "description": "Be careful out there as Ali’i beach park can get some nice barrels. This is a great area for the experienced surfer looking for a high-performance spot. Punchy rights and lefts on offer.",
+      "viewed": 0
     },
     { "name": "Backdoor",
       "location": "Ehukai Beach Park",
       "image": "https://www.surf-forecast.com/system/images/4295/large/Banzai-Pipelines-and-Backdoor.jpg?1324521720",
       "type": "Reef",
       "difficulty": "Hard",
-      "description": "This break point is right next to the famous Pipeline but still has some perfect right-hand barrels. Be careful of the shallow reef. While this isn't Pipeline is still has some really advanced surfs so keep it viewer only if you aren't advanced."
+      "description": "This break point is right next to the famous Pipeline but still has some perfect right-hand barrels. Be careful of the shallow reef. While this isn't Pipeline is still has some really advanced surfs so keep it viewer only if you aren't advanced.",
+      "viewed": 0
     },
     { "name": "Banzai Pipeline",
       "location": "Banzai Pipeline",
       "image": "https://www.surf-forecast.com/system/images/4295/large/Banzai-Pipelines-and-Backdoor.jpg?1324521720",
       "type": "Reef",
       "difficulty": "Hard ",
-      "description": "The world famous Banzai Pipeline has hosted some of the world's largest surf competitions. The beach also houses some surf brand houses such as the \"Volcom\" house. The surf is a shallow, craggy, and dangerous reef. Leave this spot for the experts."
+      "description": "The world famous Banzai Pipeline has hosted some of the world's largest surf competitions. The beach also houses some surf brand houses such as the \"Volcom\" house. The surf is a shallow, craggy, and dangerous reef. Leave this spot for the experts.",
+      "viewed": 0
     },
     { "name": "Black Point",
       "location": "Ka'alawai Beach",
       "image": "https://ec2-im-1.msw.ms/md/image.php?id=342474&type=PHOTOLAB&resize_type=STREAM_MEDIUM_SQUARE&fromS3",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Black Point is a left reef break that runs from Kaiko's, near Ka'alawai Beach. This spot is not a proper point since there are both left and right peaks scattered across the length of the reef. It is not very crowded, but during a proper swell it can get busy."
+      "description": "Black Point is a left reef break that runs from Kaiko's, near Ka'alawai Beach. This spot is not a proper point since there are both left and right peaks scattered across the length of the reef. It is not very crowded, but during a proper swell it can get busy.",
+      "viewed": 0
     },
     {"name": "Bowls",
       "location": "Ala Moana Bowls Parking Lot",
       "image": "https://www.surf-forecast.com/system/images/15181/large/Ala-Moana-Bowls.jpg?1450520565",
       "type": "Reef",
       "difficulty": "Hard",
-      "description": "If you're looking for a local favorite, this is it. With breaks headed down both sides, this point is crowded almost every day. Many locals use this spot, but its good to remember that this is a difficult spot. Large barrels, rocky reefs, and urchins are things to look out for at this break. You can paddle out from the coast or jump off the rock line right near the harbor. There's free parking at the harbor and equipment for rent at Hawaii Surfboard Rentals."
+      "description": "If you're looking for a local favorite, this is it. With breaks headed down both sides, this point is crowded almost every day. Many locals use this spot, but its good to remember that this is a difficult spot. Large barrels, rocky reefs, and urchins are things to look out for at this break. You can paddle out from the coast or jump off the rock line right near the harbor. There's free parking at the harbor and equipment for rent at Hawaii Surfboard Rentals.",
+      "viewed": 0
     },
     { "name": "Canoes",
       "location": "Kuhio Beach Park",
       "image": "http://www.surfboardshack.com/images/breaks/canoes_02.jpg",
       "type": "Reef",
       "difficulty": "Easy",
-      "description": "A great spot for beginners! Be warned this spot gets crazy busy, but for newcomers the low swells and lack of reef hazards are a welcome invitation. Do be careful of the occasional rock reef poking out the sand. Park by the Honolulu Zoo or any smaller side street by the beach. Easiest entry is by paddling out from the beach. Nearby board rentals make it an easy pick for new beginners and visiting families."
+      "description": "A great spot for beginners! Be warned this spot gets crazy busy, but for newcomers the low swells and lack of reef hazards are a welcome invitation. Do be careful of the occasional rock reef poking out the sand. Park by the Honolulu Zoo or any smaller side street by the beach. Easiest entry is by paddling out from the beach. Nearby board rentals make it an easy pick for new beginners and visiting families.",
+      "viewed": 0
     },
     { "name": "Castles",
       "location": "Castles Beach",
       "image": "https://www.surf-forecast.com/system/images/6428/large/Castles_1.jpg?1353274252",
       "type": "Beach",
       "difficulty": "Easy",
-      "description": "Castles beach is located on the east side of Oahu near Kaliua Town. The spot has consistent swells that are popular among longboarders and bodyboarders. The parking here is difficult since it is street parking close to homes. Either, get here early or catch the bus to enjoy this spot."
+      "description": "Castles beach is located on the east side of Oahu near Kaliua Town. The spot has consistent swells that are popular among longboarders and bodyboarders. The parking here is difficult since it is street parking close to homes. Either, get here early or catch the bus to enjoy this spot.",
+      "viewed": 0
     },
     { "name": "Chuns",
       "location": "Chuns Reef Beach",
       "image": "https://onlyinhawaii.org/wp-content/uploads/2014/09/Chuns-Reef-North-Shore-Oahu.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Chun's is a reef break located in the North Shore strech of surf breaks. In the 1960's, local surfer John Chun would bring his children to this surf spot and a friend started calling it \"Chun's Reef.\" The name stuck and is still called to this day. The break can wary depending on the conditions on the North Shore, so check the forecast before heading out here."
+      "description": "Chun's is a reef break located in the North Shore strech of surf breaks. In the 1960's, local surfer John Chun would bring his children to this surf spot and a friend started calling it \"Chun's Reef.\" The name stuck and is still called to this day. The break can wary depending on the conditions on the North Shore, so check the forecast before heading out here.",
+      "viewed": 0
     },
     { "name": "Diamond Head Cliffs",
       "location": "Kuilei Cliffs Beach Park",
       "image": "https://img.s-hawaiianairlines.com/static/images/explore/hawaii-stories/surfing-oahu/diamond-head-cliffs.jpg?h=477&w=639&la=en&version=26a6&sc_lang=en",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Cliffs is a popular spot among the Diamond Head shore breaks. The size of the break depends on trade winds and passing south swells. This spot is ideal during the spring and early fall. Typically, there are quite a number of surfers at this spot regardless of the season."
+      "description": "Cliffs is a popular spot among the Diamond Head shore breaks. The size of the break depends on trade winds and passing south swells. This spot is ideal during the spring and early fall. Typically, there are quite a number of surfers at this spot regardless of the season.",
+      "viewed": 0
     },
     { "name": "Ehukai",
       "location": "Ehukai Beach Park",
       "image": "https://i.pinimg.com/736x/2f/fd/72/2ffd7275ab3c549913c55db47954e18f--north-shore-oahu-hawaiian-islands.jpg",
       "type": "Reef",
       "difficulty": "Hard ",
-      "description": "Ehukai is another break that is on the north shore of Oahu. It is a little stretch of beach directly to the right of Pipeline. Offers both rights and lefts depending on conditions. This is the go to spot if there is a swell on the north shore but it is not big enough for Pipeline to offer quality rides. Be wary of strong currents at this location."
+      "description": "Ehukai is another break that is on the north shore of Oahu. It is a little stretch of beach directly to the right of Pipeline. Offers both rights and lefts depending on conditions. This is the go to spot if there is a swell on the north shore but it is not big enough for Pipeline to offer quality rides. Be wary of strong currents at this location.",
+      "viewed": 0
     },
     { "name": "Kaiser's",
       "location": "Ala Moana Bowls Parking Lot",
       "image": "http://i.cdn-surfline.com/travel/surfmaps/us/Oahu/images/Kaisers_UserImage.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Kaiser's is the easternmost surf spot on the Ala Moana shoreline. The spot is very shallow causing the waves to be fast, steep, and bowly.  It is a crowded spot so watch out for other surfers and don't run into them. There is a long paddle to and from the beach, but once you're out there the paddle isn't bad."
+      "description": "Kaiser's is the easternmost surf spot on the Ala Moana shoreline. The spot is very shallow causing the waves to be fast, steep, and bowly.  It is a crowded spot so watch out for other surfers and don't run into them. There is a long paddle to and from the beach, but once you're out there the paddle isn't bad.",
+      "viewed": 0
     },
     { "name": "Kewalos",
       "location": "Kewalo Basin Park",
       "image": "http://www.surfboardshack.com/images/breaks/kewalos_02.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Slightly larger waves for the more intermediate surfers here at Kewalos. Surf can get up to 6ft with some barrels. The break splits into a easier left break and a longer right break. This location stays mildly busy but can be more free than some other break locations. Be careful about the break coming over the shallow reef in some areas but otherwise enjoy the surf!"
+      "description": "Slightly larger waves for the more intermediate surfers here at Kewalos. Surf can get up to 6ft with some barrels. The break splits into a easier left break and a longer right break. This location stays mildly busy but can be more free than some other break locations. Be careful about the break coming over the shallow reef in some areas but otherwise enjoy the surf!",
+      "viewed": 0
     },
     { "name": "Lani's",
       "location": "Laniakea, Hale'iwa",
       "image": "https://i.pinimg.com/originals/a2/bd/d2/a2bdd21d71a871d1a3ef9e53fb263a4e.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "One of the more popular breaks right off the Kamehameha Highway in Hale’iwa. It can get very busy but with long lined up rights and peaky punchier lefts Lane’s is a great place to surf for beginner to intermediate surfers."
+      "description": "One of the more popular breaks right off the Kamehameha Highway in Hale’iwa. It can get very busy but with long lined up rights and peaky punchier lefts Lane’s is a great place to surf for beginner to intermediate surfers.",
+      "viewed": 0
     },
     { "name": "Mākaha",
       "location": "Mākaha Beach Park",
       "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.hawaiimagazine.com/content/uploads/2020/12/GettyImages-1152754811-1024x683.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Mākaha is a popular right-hand break on the west side of Oahu. There are multiple peaks and sections that one could ride depending on the conditions. Many kinds of board riders show up to this spot, so be wary out on the water. This spot is heavily dependant on the conditions for an enjoyable experience."
+      "description": "Mākaha is a popular right-hand break on the west side of Oahu. There are multiple peaks and sections that one could ride depending on the conditions. Many kinds of board riders show up to this spot, so be wary out on the water. This spot is heavily dependant on the conditions for an enjoyable experience.",
+      "viewed": 0
     },
     { "name": "Off-The-Wall",
       "location": "Rock Piles Beach",
       "image": "https://ec2-im-1.msw.ms/md/image.php?id=210672&type=PHOTOLAB&resize_type=STREAM_MEDIUM_SQUARE&fromS3",
       "type": "Reef",
       "difficulty": "Hard",
-      "description": "Right next the Pipeline this area is for advanced riders only. If you've got what it takes, be warned that this break is often extremely crowded. Especially, if a swell on the north side is ongoing. Best waves on right but some nice hollows on the left. Be careful of the reef on this break point."
+      "description": "Right next the Pipeline this area is for advanced riders only. If you've got what it takes, be warned that this break is often extremely crowded. Especially, if a swell on the north side is ongoing. Best waves on right but some nice hollows on the left. Be careful of the reef on this break point.",
+      "viewed": 0
     },
     { "name": "Pua'ena Point",
       "location": "Pua'ena Point Beach Park",
       "image": "https://www.surf-forecast.com/system/images/10086/large/Puaena-Point.jpg?1393103475",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Slabby reef but very popular place for surf lessons because the white water from the set waves out back funnels into the little bay-like setup making it a great place to teach surfing. The breakers out back offer up rippable lefts and rights. If it’s a small day could serve as a good place for a progressing surfer to put their developing skills to the test."
+      "description": "Slabby reef but very popular place for surf lessons because the white water from the set waves out back funnels into the little bay-like setup making it a great place to teach surfing. The breakers out back offer up rippable lefts and rights. If it’s a small day could serve as a good place for a progressing surfer to put their developing skills to the test.",
+      "viewed": 0
     },
     { "name": "Publics",
       "location": "Kūhiō Beach",
       "image": "https://ec2-im-1.msw.ms/md/image.php?id=389136&type=PHOTOLAB&resize_type=STREAM_MEDIUM_SQUARE&fromS3",
       "type": "Beach",
       "difficulty": "Easy",
-      "description": "Publics is a break that has consistent surf. It is very popular among beginners due to its typically mellow nature. Youth surf competitions and longboard competitions are hosted at this location when swells get a little bigger. The spot gets its name from the public restrooms that they front."
+      "description": "Publics is a break that has consistent surf. It is very popular among beginners due to its typically mellow nature. Youth surf competitions and longboard competitions are hosted at this location when swells get a little bigger. The spot gets its name from the public restrooms that they front.",
+      "viewed": 0
     },
     { "name": "Queens",
       "location": "Queens Beach",
       "image": "http://www.surfboardshack.com/images/breaks/queens_01.jpg",
       "type": "Reef",
       "difficulty": "Medium",
-      "description": "Queen Liliuokalani's beach house and its pier used to stand at this spot, giving its name \"Queen's.\" It is located right in Waikiki with the west end capped by \"The Wall\" and the east end located by Waikiki Aquarium. This spot is mainly for bodyboarders due to its close proximity to shore. Surfers come here occasionally depending on the surf conditions."
+      "description": "Queen Liliuokalani's beach house and its pier used to stand at this spot, giving its name \"Queen's.\" It is located right in Waikiki with the west end capped by \"The Wall\" and the east end located by Waikiki Aquarium. This spot is mainly for bodyboarders due to its close proximity to shore. Surfers come here occasionally depending on the surf conditions.",
+      "viewed": 0
     },
     { "name": "Sunsets",
       "location": "Sunset Beach Park",
       "image": "https://www.surfertoday.com/images/stories/sunsetbeach3.jpg",
       "type": "Reef",
       "difficulty": "Hard",
-      "description": "Located on the north shore of Oahu, Sunset beach is a world famous spot that brings surfers from all around the world. The spot can produce some massive and unruly waves and has a long paddle out, so it is best to leave this spot to the experts."
+      "description": "Located on the north shore of Oahu, Sunset beach is a world famous spot that brings surfers from all around the world. The spot can produce some massive and unruly waves and has a long paddle out, so it is best to leave this spot to the experts.",
+      "viewed": 0
     },
     { "name": "Waimea",
       "location": "Waimea Bay Beach",
       "image": "https://www.surfertoday.com/images/stories/waimea-bay-lineup.jpg",
       "type": "Beach",
       "difficulty": "Hard",
-      "description": "Waimea is home to the \"Eddie\" surf comepetition. \"The Eddie\" is a big wave surfing tournament that is invitaional only. Waimea only breaks when it has big swells and is known for its power and size. There is typically no break here unless it is in the winter season. This spot should be reserved for the experts."
+      "description": "Waimea is home to the \"Eddie\" surf comepetition. \"The Eddie\" is a big wave surfing tournament that is invitaional only. Waimea only breaks when it has big swells and is known for its power and size. There is typically no break here unless it is in the winter season. This spot should be reserved for the experts.",
+      "viewed": 0
     },
     { "name": "Yokes",
       "location": "Yokohama Bay",
       "image": "https://www.best-of-oahu.com/images/Makaha-Beach-View.jpg",
       "type": "Beach",
       "difficulty": "Easy",
-      "description": "Yokes has pretty consistent surf year round. While some complain that the breaks are on the smaller side this makes it a great spot for beginner surfers. Lots of locals frequent this break so be ready to wait for a good swell when out there."
+      "description": "Yokes has pretty consistent surf year round. While some complain that the breaks are on the smaller side this makes it a great spot for beginner surfers. Lots of locals frequent this break so be ready to wait for a good swell when out there.",
+      "viewed": 0
     }
   ],
 
