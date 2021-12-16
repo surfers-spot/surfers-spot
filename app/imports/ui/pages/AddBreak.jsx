@@ -12,7 +12,6 @@ const formSchema = new SimpleSchema({
   name: String,
   location: String,
   image: String,
-  direction: String,
   type: {
     type: String,
     allowedValues: ['Reef', 'Beach', 'Point', 'none'],

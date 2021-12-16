@@ -33,7 +33,7 @@ export default class AboutUs extends React.Component {
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
-                <Image bordered rounded size='large' src='/images/surfer1.jpg' />
+                <Image bordered rounded size='huge' src='/images/Logo.png' />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>

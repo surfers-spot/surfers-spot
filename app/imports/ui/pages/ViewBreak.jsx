@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
+import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
 
 class ViewBreak extends React.Component {
@@ -85,14 +86,16 @@ class ViewBreak extends React.Component {
         >
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
-        <Divider
-          as='h4'
-          className='header'
-          horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
-        >
-          <Link to={`/edit/${id}`}>Edit</Link>
-        </Divider>
+        {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+          <Divider
+            as='h4'
+            className='header'
+            horizontal
+            style={{ margin: '3em 0em', textTransform: 'uppercase', color: 'black' }}
+          >
+            <Link to={`/edit/${id}`}>Edit</Link>
+          </Divider>
+        ) : ''}
       </div>
     );
   }

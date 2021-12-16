@@ -6,10 +6,12 @@ class AddBreakPage {
     this.pageSelector = Selector(this.pageId);
   }
 
+  // Check that Add break page shows
   async isDisplayed(testController) {
     await testController.wait(10000).expect(this.pageSelector.exists).ok();
   }
 
+  // Test if we can add the given sample break to the collection
   async addBreak(testController, surfBreak) {
     await this.isDisplayed(testController);
     await testController.typeText('#break-form-name', surfBreak.name);
@@ -23,6 +25,11 @@ class AddBreakPage {
       .click(diffSelect.find('option').withText(surfBreak.difficulty));
     await testController.typeText('#break-form-description', surfBreak.description);
     await testController.click('#break-form-submit');
+    await testController.click('.swal-button.swal-button--confirm')
+  }
+
+  async checkAdded(testController) {
+    await testController.expect(Selector('#testing-card').exists).ok();
   }
 }
 

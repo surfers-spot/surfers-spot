@@ -9,6 +9,8 @@ import { kewalosPage } from './kewalos.page';
 import { canoesPage } from './canoes.page';
 import { footer } from './footer.component';
 import { aboutUsPage } from './aboutus.page';
+import { directoryPage } from './directory.page';
+import { admin } from './admin.page';
 
 /* global fixture:false, test:false */
 
@@ -16,15 +18,24 @@ import { aboutUsPage } from './aboutus.page';
 const credentials = { username: 'john@foo.com', password: 'changeme' };
 const adminCreds = { username: 'admin@foo.com', password: 'changeme' };
 
-/** Default break to add to see if add break form works */
+/** Default break added to see if add, edit and delete works */
 const defaultBreak = {
-  name: 'Canoes TEMP',
-  location: 'Kuhio Beach Park TEMP',
+  name: 'testing',
+  location: 'Nowhere',
   image: 'http://www.surfboardshack.com/images/breaks/canoes_02.jpg',
   type: 'Reef',
   difficulty: 'Easy',
-  description: 'TEMP A great spot for beginners! Be warned this spot gets crazy busy, but for newcomers the low swells and lack of reef hazards are a welcome invitation. Do be careful of the occasional ' +
-    'rock reef poking out the sand. Park by the Honolulu Zoo or any smaller side street by the beach. Easiest entry is by paddling out from the beach. Nearby board rentals make it an easy pick for new beginners and visiting families.',
+  description: 'An imaginary reef. Perfect for testing.',
+};
+
+/** Break to edit the default break into */
+const defaultBreakEdit = {
+  name: 'betterTesting',
+  location: 'Somewhere',
+  image: 'https://www.surf-forecast.com/system/images/15181/large/Ala-Moana-Bowls.jpg?1450520565',
+  type: 'Beach',
+  difficulty: 'Hard',
+  description: 'An imaginary reef. Perfect for testing. Now better than before',
 };
 
 fixture('meteor-application-template-react localhost test with default db')
@@ -42,17 +53,25 @@ test('Test that signin and signout work', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
+test('Test that the directory page shows up and works', async (testController) => {
+  await navBar.gotoDirectoryPage(testController);
+  await directoryPage.isDisplayed(testController);
+  await directoryPage.hasBreak(testController);
+});
+
 test
   .page('http://localhost:3000/#/random')('Test that Random page shows up', async (testController) => {
     await randomPage.isDisplayed(testController);
   });
 
-test('Test that addBreaks work', async (testController) => {
+test('Test that add-break works', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, adminCreds.username, adminCreds.password);
   await navBar.isLoggedIn(testController, adminCreds.username);
   await navBar.gotoAddBreakPage(testController);
   await addBreakPage.addBreak(testController, defaultBreak);
+  await navBar.gotoDirectoryPage(testController);
+  await addBreakPage.checkAdded(testController);
 });
 
 test('Test random page button works', async (testController) => {
@@ -104,3 +123,17 @@ test
   .page('http://localhost:3000/#/view/Canoes')('Test that Canoes page shows up', async (testController) => {
     await canoesPage.isDisplayed(testController);
   });
+
+test('Test that admin features work', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, adminCreds.username, adminCreds.password);
+  await navBar.isLoggedIn(testController, adminCreds.username);
+  await navBar.gotoDirectoryPage(testController);
+  await admin.goToEdit(testController);
+  await admin.editBreak(testController, defaultBreakEdit);
+  await navBar.gotoDirectoryPage(testController);
+  await admin.checkEdit(testController);
+  await admin.deleteBreak(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
