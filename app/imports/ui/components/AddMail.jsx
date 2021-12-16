@@ -21,7 +21,7 @@ class AddMail extends React.Component {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Note added successfully', 'success');
+          swal('Success', 'You have been added to the mailing list', 'success');
           formRef.reset();
         }
       });
