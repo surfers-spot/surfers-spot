@@ -175,11 +175,6 @@
     }
   ],
 
-  "defaultEmails": [
-    { "email": "john@foo.com" },
-    { "email": "admin@foo.com" }
-  ],
-
   "monti": {
     "appId": "st2gcehxg4z8by5Ga",
     "appSecret": "c5446863-b04e-456b-9ca7-bad002af5822"

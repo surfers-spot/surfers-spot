@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Breaks } from '../../api/break/Break';
 import { Reviews } from '../../api/review/Review';
-import { Emails } from '../../api/emails/Emails';
+import { Mails } from '../../api/mail/Mail';
 
 // General level publication. Will publish everything in the collection.
 Meteor.publish(Breaks.userPublicationName, function () {
@@ -18,9 +18,9 @@ Meteor.publish(Reviews.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Emails.userPublicationName, function () {
+Meteor.publish(Mails.userPublicationName, function () {
   if (true) {
-    return Emails.collection.find();
+    return Mails.collection.find();
   }
   return this.ready();
 });
