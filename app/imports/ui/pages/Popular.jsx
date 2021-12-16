@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Divider, Container, Feed } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Divider, Container } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
 import { Reviews } from '../../api/review/Review';
-import AddReview from '../components/AddReview';
 import Review from '../components/Review';
+import AddReview from '../components/AddReview';
 
 class PopularPage extends React.Component {
 
@@ -83,9 +83,8 @@ class PopularPage extends React.Component {
           <a href={`http://maps.google.com/?q=${location}`}>Get Directions</a>
         </Divider>
         <Container>
-          <Feed>
-            {reviews.map((text, index) => <Review key={index} text={text}/>)}
-          </Feed>
+          <Header as='h3' style={{ fontSize: '3em', textAlign: 'left' }}>Reviews</Header>
+          {reviews.map((text, index) => <Review key={index} text={text}/>)}
         </Container>
         <Container>
           <AddReview name={page}/>
