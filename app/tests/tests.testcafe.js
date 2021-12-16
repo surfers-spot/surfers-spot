@@ -11,6 +11,7 @@ import { footer } from './footer.component';
 import { aboutUsPage } from './aboutus.page';
 import { directoryPage } from './directory.page';
 import { admin } from './admin.page';
+import { popularPage } from './popular.page';
 
 /* global fixture:false, test:false */
 
@@ -90,14 +91,14 @@ test('Test random page footer link works', async (testController) => {
 
 test('Test popular page button works', async (testController) => {
   await navBar.gotoPopularPage(testController);
-  await bowlsPage.isDisplayed(testController);
+  await popularPage.isDisplayed(testController);
   await navBar.gotoLandingPage(testController);
   await landingPage.isDisplayed(testController);
 });
 
 test('Test popular page footer link works', async (testController) => {
   await footer.gotoPopularPage(testController);
-  await bowlsPage.isDisplayed(testController);
+  await popularPage.isDisplayed(testController);
   await navBar.gotoLandingPage(testController);
   await landingPage.isDisplayed(testController);
 });
