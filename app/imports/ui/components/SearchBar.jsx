@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Search } from 'semantic-ui-react';
+import { Search, Container } from 'semantic-ui-react';
 import _ from 'lodash';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
@@ -65,7 +65,6 @@ function SearchBar() {
       }
       onSearchChange={handleSearchChange}
       results={results}
-      aligned= 'right'
       value={value}
       size = 'massive'
       resultRenderer={resultRenderer}

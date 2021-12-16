@@ -7,7 +7,6 @@ import { _ } from 'meteor/underscore';
 import { Breaks } from '../../api/break/Break';
 import { Reviews } from '../../api/review/Review';
 import Review from '../components/Review';
-import AddReview from '../components/AddReview';
 
 class PopularPage extends React.Component {
 
@@ -85,9 +84,6 @@ class PopularPage extends React.Component {
         <Container>
           <Header as='h3' style={{ fontSize: '3em', textAlign: 'left' }}>Reviews</Header>
           {reviews.map((text, index) => <Review key={index} text={text}/>)}
-        </Container>
-        <Container>
-          <AddReview name={page}/>
         </Container>
       </div>
     );

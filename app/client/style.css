@@ -11,12 +11,12 @@
 
 .lessonBackground{
   background-size: cover !important;
-  background: url("/images/background2.jpg") bottom;
+  background: url("/images/background8.jpg") top;
 }
 
 .directoryBackground{
   background-size: cover !important;
-  background: url("/images/surfboardBackgroun.jpg") bottom;
+  background: url("/images/background4.jpg") top;
 }
 
 .blurBackground {
@@ -42,9 +42,16 @@
 
 .breakGrid{
   background: rgba(255, 255, 255, 1);
+  padding: 1em;
 }
 
 .ui.form .field > label {
   padding-bottom: 0.5em !important;
   font-size: 1.5em !important;
+}
+
+.ui.search > .results {
+  left: 35% !important;
+  width: 30% !important;
+  margin-top: 0.1em !important;
 }

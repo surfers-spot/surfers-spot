@@ -18,7 +18,7 @@ class Landing extends React.Component {
     return (
       <div>
         <div className="surfers-spot-background">
-          <Container textAlign="center" style={{ padding: 50 }}>
+          <Container textAlign="center" style={{ padding: 25 }}>
             <Header inverted as='h1'>Catch your Next Wave</Header>
             <div>
               <SearchBar/>

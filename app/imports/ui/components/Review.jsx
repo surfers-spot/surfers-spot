@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 class Review extends React.Component {
   render() {
     return (
-      <Segment style={{ fontSize: '1.2em' }}>
+      <Segment style={{ fontSize: '1.2em', marginBottom: '16.8px' }}>
         {this.props.text}
       </Segment>
     );
