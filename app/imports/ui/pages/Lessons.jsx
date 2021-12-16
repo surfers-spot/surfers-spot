@@ -7,7 +7,7 @@ export default class Lessons extends React.Component {
     return (
       <div className="lessonBackground">
         <br/>
-        <Header id="lessons-page" as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>LESSONS</Header>
+        <Header inverted id="lessons-page" as='h3' style={{ fontSize: '2em', textAlign: 'center' }}>LESSONS</Header>
         <Segment vertical>
           <Container>
             <Card.Group itemsPerRow={4}>

@@ -21,7 +21,7 @@ class Landing extends React.Component {
           <Container textAlign="center" style={{ padding: 50 }}>
             <Header inverted as='h1'>Catch your Next Wave</Header>
             <div>
-              <SearchBar size = 'massive'/>
+              <SearchBar/>
             </div>
           </Container>
           <Grid id='landing-page' centered stackable columns={3} container>

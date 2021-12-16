@@ -14,6 +14,11 @@
   background: url("/images/surfboardBackgroun.jpg") bottom;
 }
 
+.directoryBackground{
+  background-size: cover !important;
+  background: url("/images/surfboardBackgroun.jpg") bottom;
+}
+
 .blurBackground {
   backdrop-filter: blur(5px);
   border-radius: 10px;
@@ -39,9 +44,3 @@
   background: rgba(255, 255, 255, 1);
 }
 
-.ui.search > .results {
-  top: 100% !important;
-  left: 35% !important;
-  margin-top: 0 !important;
-  width: 12.5em !important;
-}

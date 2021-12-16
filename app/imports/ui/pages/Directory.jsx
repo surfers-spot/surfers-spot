@@ -17,12 +17,14 @@ class Directory extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container style={{ align: 'center', paddingBottom: '3em' }}>
-        <Header as="h2" textAlign="center" inverted>Surf Breaks Directory</Header>
-        <Card.Group>
-          {this.props.breaks.map((spot, index) => <BreakCards key={index} break={spot}/>)}
-        </Card.Group>
-      </Container>
+      <div className='directoryBackground' style={{ align: 'center', paddingBottom: '5em', paddingLeft: '4em' }}>
+        <Header as="h1" textAlign="center" inverted>Surf Breaks Directory</Header>
+        <Container fluid>
+          <Card.Group>
+            {this.props.breaks.map((spot, index) => <BreakCards key={index} break={spot}/>)}
+          </Card.Group>
+        </Container>
+      </div>
     );
   }
 }

@@ -65,6 +65,7 @@ function SearchBar() {
       }
       onSearchChange={handleSearchChange}
       results={results}
+      aligned= 'right'
       value={value}
       size = 'massive'
       resultRenderer={resultRenderer}
