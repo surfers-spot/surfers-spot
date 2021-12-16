@@ -28,4 +28,4 @@ class ReviewCollection {
  * The singleton instance of the BreaksCollection.
  * @type {ReviewCollection}
  */
-export const Breaks = new ReviewCollection();
+export const Review = new ReviewCollection();

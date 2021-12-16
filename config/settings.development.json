@@ -4,6 +4,12 @@
     { "email": "john@foo.com", "password": "changeme" }
   ],
 
+  "defaultReviews": [
+    { "name": "Bowls", "text": "example review 1" },
+    { "name": "Canoes", "text": "example review 2" }
+  ],
+
+
   "defaultData": [
     { "name": "Bowls",
       "location": "Ala Moana Bowls Parking Lot",
