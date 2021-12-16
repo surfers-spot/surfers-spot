@@ -1,12 +1,15 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Loader, Header, Segment, Grid, Image, Button, Divider } from 'semantic-ui-react';
+import { Loader, Header, Segment, Grid, Image, Button, Divider, Container, Feed } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { Roles } from 'meteor/alanning:roles';
 import { Breaks } from '../../api/break/Break';
+import { Reviews } from '../../api/review/Review';
+import AddReview from '../components/AddReview';
+import Review from '../components/Review';
 
 class ViewBreak extends React.Component {
 
@@ -25,7 +28,12 @@ class ViewBreak extends React.Component {
     const description = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), 'description');
     const id = _.pluck(Breaks.collection.find({ name: this.props.breakName }).fetch(), '_id');
     const pageId = `${this.props.breakName}-page`;
+<<<<<<< Updated upstream
     console.log(pageId);
+=======
+    const reviews = _.pluck(Reviews.collection.find({ breakName: this.props.breakName }).fetch(), 'text');
+  console.log(reviews);
+>>>>>>> Stashed changes
     return (
       <div>
         <div className='titleBackground'>
@@ -96,6 +104,14 @@ class ViewBreak extends React.Component {
             <Link to={`/edit/${id}`}>Edit</Link>
           </Divider>
         ) : ''}
+        <Container>
+          <Feed>
+            {reviews.map((text, index) => <Review key={index} text={text}/>)}
+          </Feed>
+        </Container>
+        <Container>
+          <AddReview name={this.props.breakName}/>
+        </Container>
       </div>
     );
   }
@@ -111,8 +127,9 @@ export default withTracker(({ match }) => {
   const breakName = match.params.name;
   // Ensure that minimongo is populated with all collections prior to running render().
   const sub1 = Meteor.subscribe(Breaks.userPublicationName);
+  const sub2 = Meteor.subscribe(Reviews.userPublicationName)
   return {
-    ready: sub1.ready(),
+    ready: sub1.ready() && sub2.ready(),
     breakName,
   };
 })(ViewBreak);
